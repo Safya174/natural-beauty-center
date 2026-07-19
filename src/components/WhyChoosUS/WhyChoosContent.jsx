@@ -17,7 +17,7 @@ export default function WhyChoosContent() {
       <Typography
         variant="overline"
         sx={{
-          fontFamily: "'Cormorant Garamond', serif",
+         fontFamily: "Alexandria",
           fontSize: "1rem",
           letterSpacing: 2,
           textTransform: "uppercase",
@@ -47,6 +47,7 @@ export default function WhyChoosContent() {
           fontFamily: "Alexandria",
           fontWeight: 400,
           lineHeight: 1.9,
+          textAlign:"center"
         }}
       >
         We combine the power of nature with years of expertise to deliver

@@ -13,7 +13,7 @@ export default function FooterSection() {
     <Box
       component="footer"
       sx={{
-        py: 8,
+        py: 2,
         backgroundColor:"#E7F3E5",
         borderTop: "1px solid",
         borderColor: "rgba(74,107,60,.12)",

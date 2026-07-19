@@ -18,7 +18,7 @@ export default function AboutContent() {
       <Typography
         variant="overline"
         sx={{
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: "Alexandria",
           fontSize: "1rem",
           letterSpacing: 2,
           textTransform: "uppercase",

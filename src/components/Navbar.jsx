@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <>
       <AppBar
-        position="fixed"
+        position="sticky"
         elevation={0}
         sx={{
           bgcolor: "#E7F3E5", //"background.paper",
@@ -57,8 +57,8 @@ export default function Navbar() {
                 display: "flex",
                 alignItems: "center",
                 gap: 1.5,
-                
-                height:"100%"
+
+                height: "100%",
               }}
             >
               <img
@@ -67,8 +67,7 @@ export default function Navbar() {
                 style={{
                   width: 75,
                   backgroundColor: "secondary.main",
-                  height:"100%",
-                  
+                  height: "100%",
                 }}
               />
 
@@ -79,7 +78,7 @@ export default function Navbar() {
                   fontWeight: 700,
                 }}
               >
-                Natural Beauty
+                Natural Beauty Center
               </Typography>
             </Box>
 

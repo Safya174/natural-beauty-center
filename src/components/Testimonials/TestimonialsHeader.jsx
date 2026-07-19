@@ -16,7 +16,7 @@ export default function TestimonialsHeader() {
       <Typography
         variant="overline"
         sx={{
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: "Alexandria",
           fontSize: "1rem",
           letterSpacing: 2,
           textTransform: "uppercase",
@@ -46,6 +46,7 @@ export default function TestimonialsHeader() {
           fontFamily: "Alexandria",
           fontWeight: 400,
           lineHeight: 1.9,
+          textAlign:"center"
         }}
       >
     
