@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import AboutImage from "../../assets/AboutS.png";
-export default function HeroContent() {
+export default function AboutImagep() {
   return (
     <Box
       component="img"
