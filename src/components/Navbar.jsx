@@ -46,7 +46,7 @@ export default function Navbar() {
         <Container maxWidth="xl">
           <Toolbar
             sx={{
-              height: 85,
+              height: 75,
               justifyContent: "space-between",
             }}
           >

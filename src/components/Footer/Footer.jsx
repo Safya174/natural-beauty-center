@@ -14,10 +14,7 @@ export default function FooterSection() {
       component="footer"
       sx={{
         py: 8,
-        background: `
-          radial-gradient(circle at top, rgba(126, 165, 110, .08), transparent 45%),
-          linear-gradient(180deg, #F7FAF4 0%, #EEF5E9 100%)
-        `,
+        backgroundColor:"#E7F3E5",
         borderTop: "1px solid",
         borderColor: "rgba(74,107,60,.12)",
       }}

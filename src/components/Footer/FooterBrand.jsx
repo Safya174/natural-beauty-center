@@ -19,7 +19,8 @@ export default function FooterBrand() {
         alt="Brand Logo"
         sx={{
           width: 200,
-          borderRadius: "50%",
+        
+          borderRadius: "60%",
         }}
       />
 
