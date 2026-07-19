@@ -23,7 +23,7 @@ export default function HeroContent() {
           fontSize: "2.2rem",
           fontWeight: 600,
           letterSpacing: "3px",
-          mb:0
+          mt:2
         }}
       >
         Natural Beauty Center

@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import logo from "../assets/photo_2026-07-01_19-34-12.jpg";
 const pages = [
   { title: "Home", path: "/" },
@@ -35,12 +35,12 @@ export default function Navbar() {
   return (
     <>
       <AppBar
-        position="sticky"
+        position="fixed"
         elevation={0}
         sx={{
-          bgcolor: "transparent",  //"background.paper",
-          borderBottom: "1px solid",
-          borderColor: 'transparent' //"divider",
+          bgcolor: "#E7F3E5", //"background.paper",
+          borderLeft: "1px solid",
+          borderColor: "#E7F3E5", //"divider",
         }}
       >
         <Container maxWidth="xl">
@@ -57,13 +57,18 @@ export default function Navbar() {
                 display: "flex",
                 alignItems: "center",
                 gap: 1.5,
+                
+                height:"100%"
               }}
             >
               <img
                 src={logo}
                 alt="logo"
                 style={{
-                  width: 55,
+                  width: 75,
+                  backgroundColor: "secondary.main",
+                  height:"100%",
+                  
                 }}
               />
 
@@ -176,7 +181,7 @@ export default function Navbar() {
       {/* Drawer */}
 
       <Drawer
-        anchor="right"
+        anchor="left"
         open={openDrawer}
         onClose={() => toggleDrawer(false)}
         PaperProps={{
