@@ -47,7 +47,7 @@ export default function WhyChoosContent() {
           fontFamily: "Alexandria",
           fontWeight: 400,
           lineHeight: 1.9,
-          textAlign:"center"
+         
         }}
       >
         We combine the power of nature with years of expertise to deliver

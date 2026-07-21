@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/photo_2026-07-01_19-34-12.jpg";
 const pages = [
   { title: "Home", path: "/" },
@@ -97,7 +97,7 @@ export default function Navbar() {
               {pages.map((page) => (
                 <Button
                   key={page.title}
-                  component={Link}
+                  component={NavLink}
                   to={page.path}
                   sx={{
                     color: "text.primary",
@@ -108,6 +108,10 @@ export default function Navbar() {
                     "&:hover": {
                       bgcolor: "secondary.main",
                       color: "primary.main",
+                    },
+                    "&.active": {
+                      color: "primary.main",
+                      bgcolor: "secondary.main",
                     },
                   }}
                 >
@@ -194,8 +198,14 @@ export default function Navbar() {
           {pages.map((page) => (
             <ListItem key={page.title} disablePadding>
               <ListItemButton
-                component={Link}
+                component={NavLink}
                 to={page.path}
+                sx={{
+                  "&.active": {
+                    color: "primary.main",
+                    bgcolor: "secondary.main",
+                  },
+                }}
                 onClick={() => toggleDrawer(false)}
               >
                 <ListItemText
@@ -218,6 +228,8 @@ export default function Navbar() {
             <Button
               fullWidth
               variant="contained"
+              component={NavLink}
+              to="/sessions"
               sx={{
                 bgcolor: "primary.main",
                 borderRadius: 3,

@@ -13,14 +13,14 @@ export default function FooterSection() {
     <Box
       component="footer"
       sx={{
-        py: 2,
+        
         backgroundColor:"#E7F3E5",
         borderTop: "1px solid",
         borderColor: "rgba(74,107,60,.12)",
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={5}>
+        <Grid container spacing={0}>
           <Grid size={{ xs: 12 }}>
             <FooterBrand />
           </Grid>

@@ -20,7 +20,7 @@ const palette = {
   divider: "#E6E2DA",
 
   custom: {
-    whatsapp: "#25D366",
+   // whatsapp: "#25D366",
     cardBg: "#F5F9F2",
 
   },

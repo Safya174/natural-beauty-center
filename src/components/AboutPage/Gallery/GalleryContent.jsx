@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import spacing from "../../theme/spacing";
+import spacing from "../../../theme/spacing";
 
-export default function TestimonialsHeader() {
+export default function GalleryContent() {
   return (
     <Box
       component="section"
@@ -10,7 +10,7 @@ export default function TestimonialsHeader() {
         display: "flex",
         flexDirection: "column",
         gap: spacing.hero.contentGap,
-        alignItems:"center"
+        alignItems: "center",
       }}
     >
       <Typography
@@ -24,7 +24,7 @@ export default function TestimonialsHeader() {
           fontWeight: 600,
         }}
       >
-        Testimonials
+        The Essence of Wellness
       </Typography>
       <Typography
         variant="h2"
@@ -35,7 +35,7 @@ export default function TestimonialsHeader() {
           color: "text.primary",
         }}
       >
-        What Our Clients Say
+        Inside Natural Beauty Center
       </Typography>
       <Typography
         variant="body1"
@@ -46,13 +46,11 @@ export default function TestimonialsHeader() {
           fontFamily: "Alexandria",
           fontWeight: 400,
           lineHeight: 1.9,
-         
         }}
       >
-    
-        Real experiences from clients who trusted Natural Beauty Center.
+        Explore our peaceful spaces, discover our natural products, and
+        experience beauty inspired by the purity of nature.
       </Typography>
-    
     </Box>
   );
 }

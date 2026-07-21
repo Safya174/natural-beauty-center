@@ -1,8 +1,9 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import spacing from "../../theme/spacing";
 
-export default function TestimonialsHeader() {
+import spacing from "../../../theme/spacing";
+
+export default function OurMissionContent() {
   return (
     <Box
       component="section"
@@ -10,7 +11,8 @@ export default function TestimonialsHeader() {
         display: "flex",
         flexDirection: "column",
         gap: spacing.hero.contentGap,
-        alignItems:"center"
+        alignItems: "center",
+        
       }}
     >
       <Typography
@@ -24,7 +26,7 @@ export default function TestimonialsHeader() {
           fontWeight: 600,
         }}
       >
-        Testimonials
+        Our Values
       </Typography>
       <Typography
         variant="h2"
@@ -35,24 +37,26 @@ export default function TestimonialsHeader() {
           color: "text.primary",
         }}
       >
-        What Our Clients Say
+        Beauty Rooted in Nature
       </Typography>
       <Typography
         variant="body1"
         color="text.secondary"
         sx={{
-          maxWidth: "42rem",
+          maxWidth: "55rem",
           mt: 0,
           fontFamily: "Alexandria",
           fontWeight: 400,
           lineHeight: 1.9,
-         
+          
+          
+          
         }}
       >
-    
-        Real experiences from clients who trusted Natural Beauty Center.
+        We believe that true beauty comes from the perfect balance between
+        nature, wellness, and self-care. Every step of our journey reflects our
+        commitment to purity, quality, and excellence.
       </Typography>
-    
     </Box>
   );
 }

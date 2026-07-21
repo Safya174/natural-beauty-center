@@ -1,27 +1,36 @@
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
-import Hero from './components/Hero/Hero'
-import AboutSection from './components/About/About'
-import WhyChoos from './components/WhyChoosUS/WhyChoos'
-import OurProductsSection from './components/ProductHome/Product'
-import FooterSection from './components/Footer/Footer'
-import ReviewSection from './components/Testimonials/ReviewsSection';
-import OurStorySection from './components/AboutPage/OurStory/OurStory'
+import MinLayout from "./layouts/Layout";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      easing: "ease-in-out",
+      once: false,
+      mirror: true,
+    });
+  }, []);
 
   return (
-    <>
-   
-      
-     <Hero></Hero>
-     <AboutSection></AboutSection>
-     <WhyChoos></WhyChoos>
-     <OurProductsSection></OurProductsSection>
-     <ReviewSection></ReviewSection>
-     <FooterSection></FooterSection>
-     <OurStorySection></OurStorySection>
-
-    </>
-  )
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route element={<MinLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+        </Route>
+      </Routes>
+    </AnimatePresence>
+  );
 }
 
-export default App
+export default App;

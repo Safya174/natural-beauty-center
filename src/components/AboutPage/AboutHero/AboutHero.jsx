@@ -1,21 +1,22 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import BackgroundImg from "../../assets/screen.png";
-import HeroContent from "./HeroContent";
+import BackgroundImg from "../../../assets/AboutHero.webp";
+import AboutHeroContent from './AboutHeroContent'
 
-export default function Hero() {
+
+export default function AboutHero() {
   return (
     <Box
       component="section"
       sx={{
         backgroundImage: `url(${BackgroundImg})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+       
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
       }}
     >
-      
+    
 
       <Container
         maxWidth="xl"
@@ -29,7 +30,7 @@ export default function Hero() {
           },
         }}
       >
-        <HeroContent />
+        <AboutHeroContent />
          
       </Container>
     </Box>

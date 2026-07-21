@@ -19,9 +19,9 @@ export default function HeroContent() {
         variant="overline"
         color="primary.main"
         sx={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "2.2rem",
-          fontWeight: 600,
+          fontFamily: "Alexandria",
+          fontSize: "2rem",
+        
           letterSpacing: "3px",
           mt:2
         }}
