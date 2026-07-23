@@ -9,7 +9,7 @@ export default function GallerySection() {
   return (
     <Box
       component="section"
-      sx={{ py: spacing.section.py, backgroundColor: "background.paper" }}
+      sx={{ py: spacing.section.py, backgroundColor: "#F8F5EF"}}
     >
       <Container maxWidth="lg">
         <Grid container spacing={5} alignItems="center">
