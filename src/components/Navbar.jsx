@@ -12,11 +12,14 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Badge,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/photo_2026-07-01_19-34-12.jpg";
+
 const pages = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
@@ -38,9 +41,9 @@ export default function Navbar() {
         position="sticky"
         elevation={0}
         sx={{
-          bgcolor: "#E7F3E5", //"background.paper",
+          bgcolor: "#E7F3E5",
           borderLeft: "1px solid",
-          borderColor: "#E7F3E5", //"divider",
+          borderColor: "#E7F3E5",
         }}
       >
         <Container maxWidth="xl">
@@ -57,7 +60,6 @@ export default function Navbar() {
                 display: "flex",
                 alignItems: "center",
                 gap: 1.5,
-
                 height: "100%",
               }}
             >
@@ -66,7 +68,6 @@ export default function Navbar() {
                 alt="logo"
                 style={{
                   width: 75,
-                  backgroundColor: "secondary.main",
                   height: "100%",
                 }}
               />
@@ -90,7 +91,6 @@ export default function Navbar() {
                   xs: "none",
                   md: "flex",
                 },
-
                 gap: 1,
               }}
             >
@@ -109,6 +109,7 @@ export default function Navbar() {
                       bgcolor: "secondary.main",
                       color: "primary.main",
                     },
+
                     "&.active": {
                       color: "primary.main",
                       bgcolor: "secondary.main",
@@ -130,7 +131,7 @@ export default function Navbar() {
                 },
 
                 alignItems: "center",
-                gap: 2,
+                gap: 1,
               }}
             >
               <Button
@@ -141,6 +142,31 @@ export default function Navbar() {
               >
                 EN
               </Button>
+
+              {/* Cart */}
+
+              <IconButton
+                component={NavLink}
+                to="/cart"
+                sx={{
+                  color: "text.primary",
+                  borderRadius: 3,
+
+                  "&:hover": {
+                    bgcolor: "secondary.main",
+                    color: "primary.main",
+                  },
+
+                  "&.active": {
+                    bgcolor: "secondary.main",
+                    color: "primary.main",
+                  },
+                }}
+              >
+                <Badge badgeContent={3} color="error">
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
+              </IconButton>
 
               <Button
                 variant="contained"
@@ -200,13 +226,13 @@ export default function Navbar() {
               <ListItemButton
                 component={NavLink}
                 to={page.path}
+                onClick={() => toggleDrawer(false)}
                 sx={{
                   "&.active": {
                     color: "primary.main",
                     bgcolor: "secondary.main",
                   },
                 }}
-                onClick={() => toggleDrawer(false)}
               >
                 <ListItemText
                   primary={page.title}
@@ -218,6 +244,32 @@ export default function Navbar() {
               </ListItemButton>
             </ListItem>
           ))}
+
+          {/* Cart */}
+
+          <ListItem disablePadding>
+            <ListItemButton
+              component={NavLink}
+              to="/cart"
+              onClick={() => toggleDrawer(false)}
+              sx={{
+                "&.active": {
+                  color: "primary.main",
+                  bgcolor: "secondary.main",
+                },
+              }}
+            >
+              <ShoppingCartOutlinedIcon sx={{ mr: 2 }} />
+
+              <ListItemText
+                primary="Cart"
+                primaryTypographyProps={{
+                  color: "text.primary",
+                  fontWeight: 500,
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
 
           <Box
             sx={{

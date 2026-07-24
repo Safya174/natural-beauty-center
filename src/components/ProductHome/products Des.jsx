@@ -9,14 +9,14 @@ import nessFatCream from "../../assets/pro8.WebP"
 const products = [
   {
     id: 1,
-    name: "Horsetail Spray",
+    name: "Horsetail Herbal Spray",
     image: horsetailSpray,
     category: "Hair Care",
     badge: "Best Seller",
     price: 160,
     oldPrice: 195,
     description:
-      "Enriched with horsetail extract to nourish hair, strengthen roots, and support healthy growth",
+      "Natural herbal spray made with horsetail extract for everyday hair care.",
   },
 
   {
@@ -28,32 +28,33 @@ const products = [
     price: 225,
     oldPrice: 270,
     description:
-      "A gentle sulfate-free shampoo that cleanses the scalp while keeping hair soft and hydrated",
+      "Gentle herbal shampoo with botanical ingredients for a refreshing cleanse.",
   },
 
   {
     id: 3,
-    name: "Antimony Hair Growth Oil",
+    name: "Antimony Herbal Oil",
     image: antimonyOil,
-    category: "Hair Care",
-    badge: "Hair Growth",
+    category: "Natural Oils",
+    badge: "Herbal",
     price: 350,
     oldPrice: 450,
     description:
-      "A powerful herbal oil that strengthens roots, promotes healthy hair growth, and reduces hair loss.",
+      "Traditional herbal oil prepared from carefully selected natural ingredients.",
   },
 
   {
     id: 4,
     name: "Natural Hair Styling Cream",
     image: stylingCream,
-    category: "Hair Styling",
+    category: "Hair Care",
     badge: "Premium",
     price: 195,
     oldPrice: 235,
     description:
-      "A lightweight styling cream enriched with natural oils for soft hold and healthy shine .",
+      "Lightweight styling cream enriched with natural oils for everyday use.",
   },
+
   {
     id: 5,
     name: "Natural Herbal Hair Balm",
@@ -63,41 +64,43 @@ const products = [
     price: 200,
     oldPrice: 250,
     description:
-      "Deeply nourishing herbal hair balm that hydrates, repairs frizz, strengthens hair, and leaves it silky, soft, and naturally shiny.",
+      "Herbal balm crafted with botanical ingredients for daily hair care.",
   },
+
   {
     id: 6,
-    name: "Organic Spirulina Capsules",
+    name: "Organic Spirulina",
     image: spirulinaCapsules,
-    category: "Wellness",
+    category: "Herbal Products",
     badge: "Organic",
     price: 350,
     oldPrice: 420,
-     description:
-  "Boost energy, strengthen immunity, and nourish skin & hair naturally.",
+    description:
+      "Premium organic spirulina carefully selected as part of our natural collection.",
   },
-  {
-  id: 5,
-  name: "Indian Costus Capsules",
-  image: indianCostusCapsules,
-  category: "Supplements",
-  badge: "Natural",
-  price: 350,
-  oldPrice: 420,
-  description:
-  "Premium Indian Costus capsules for daily wellness and natural immune support.",
-},
-{
-  id: 6,
-  name: "Ness Fat Natural Cream",
-  image: nessFatCream,
-  category: "Body Care",
-  badge: "Best Seller",
-  price: 420,
-  oldPrice: 480,
-  description:
-    "Natural body cream enriched with botanical ingredients for smoother, healthier-looking skin.",
-}
-];
 
+  {
+    id: 7,
+    name: "Indian Costus",
+    image: indianCostusCapsules,
+    category: "Herbal Products",
+    badge: "Natural",
+    price: 350,
+    oldPrice: 420,
+    description:
+      "High-quality Indian Costus prepared with care from trusted natural sources.",
+  },
+
+  {
+    id: 8,
+    name: "Natural Herbal Cream",
+    image: nessFatCream,
+    category: "Body Care",
+    badge: "Best Seller",
+    price: 420,
+    oldPrice: 480,
+    description:
+      "Herbal body cream enriched with botanical ingredients for daily skin care.",
+  },
+];
 export default products;

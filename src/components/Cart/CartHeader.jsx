@@ -2,15 +2,16 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import spacing from "../../theme/spacing";
 
-export default function ProductContent() {
+export default function CartContent() {
   return (
     <Box
       component="section"
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: spacing.hero.contentGap,
+      
         alignItems: "center",
+        py: spacing.section.py,
       }}
     >
       <Typography
@@ -22,7 +23,7 @@ export default function ProductContent() {
           color: "text.primary",
         }}
       >
-        Nature's Collection
+        Shopping Cart
       </Typography>
       <Typography
         variant="body1"
@@ -35,9 +36,8 @@ export default function ProductContent() {
           lineHeight: 1.9,
         }}
       >
-        Explore our collection of carefully selected herbs, natural oils,
-        botanical ingredients, and traditional wellness products inspired by
-        nature.
+        Take a moment to review your selected natural products before placing
+        your order through WhatsApp.
       </Typography>
     </Box>
   );

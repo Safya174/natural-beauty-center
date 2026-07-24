@@ -11,18 +11,17 @@ export const categories = [
   },
   {
     id: 3,
-    name: "Skin Care",
-    value: "Skin Care",
+    name: "Body Care",
+    value: "Body Care",
   },
   {
     id: 4,
-
-    name: "Herbal Supplements",
-    value: "Herbal Supplements",
+    name: "Natural Oils",
+    value: "Natural Oils",
   },
   {
     id: 5,
-    name: "Natural Oils",
-    value: "Natural Oils",
+    name: "Herbal Products",
+    value: "Herbal Products",
   },
 ];

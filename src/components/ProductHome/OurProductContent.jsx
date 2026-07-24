@@ -7,7 +7,7 @@ export default function ProductContent() {
         textAlign: "center",
         maxWidth: "850px",
         mx: "auto",
-        mt:8
+        mt: 8,
       }}
     >
       <Typography
@@ -20,7 +20,7 @@ export default function ProductContent() {
           fontWeight: 600,
         }}
       >
-        OUR PRODUCTS
+        OUR NATURAL COLLECTION
       </Typography>
 
       <Typography
@@ -32,9 +32,7 @@ export default function ProductContent() {
           color: "text.primary",
         }}
       >
-        Natural Products Crafted
-        <br />
-        For Everyday Wellness
+        Pure Herbs & Natural Essentials
       </Typography>
 
       <Typography
@@ -47,9 +45,9 @@ export default function ProductContent() {
           mx: "auto",
         }}
       >
-        Discover our carefully selected collection of botanical oils, herbal
-        extracts, and natural formulas designed to nourish your skin, strengthen
-        your hair, and support your everyday wellness.
+        Explore our carefully selected collection of herbs, botanical oils, and
+        natural products inspired by traditional wellness and everyday
+        self-care.
       </Typography>
     </Box>
   );

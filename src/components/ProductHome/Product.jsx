@@ -15,7 +15,7 @@ export default function OurProductsSection() {
           </Grid>
            
           <Grid size={{ xs: 12 }}>
-             <ProductGrid py={0}  />
+             <ProductGrid py={0} limit={4}  />
           </Grid>
         </Grid>
       </Container>
