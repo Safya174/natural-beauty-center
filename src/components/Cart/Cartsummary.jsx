@@ -8,9 +8,11 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { secondaryButton, primaryButton } from "../../Theme/buttonStyles";
 import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function CartSummary() {
-  let { getTotalPrice,getTotalItems,sendOrderToWhatsApp } = useContext(CartContext);
+  let { getTotalPrice, getTotalItems, sendOrderToWhatsApp } =
+    useContext(CartContext);
   return (
     <Box
       sx={{
@@ -141,6 +143,8 @@ export default function CartSummary() {
       <Button
         variant="outlined"
         fullWidth
+        component={NavLink}
+        to="/products"
         startIcon={<ShoppingBagOutlinedIcon />}
         sx={secondaryButton}
       >
