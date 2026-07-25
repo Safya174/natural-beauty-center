@@ -17,6 +17,8 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { CartContext } from "./Context/CartContext";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/photo_2026-07-01_19-34-12.jpg";
 
@@ -34,7 +36,7 @@ export default function Navbar() {
   const toggleDrawer = (value) => {
     setOpenDrawer(value);
   };
-
+     let { getTotalItems } = useContext(CartContext);
   return (
     <>
       <AppBar
@@ -163,7 +165,7 @@ export default function Navbar() {
                   },
                 }}
               >
-                <Badge badgeContent={3} color="error">
+                <Badge badgeContent={getTotalItems()} color="error">
                   <ShoppingCartOutlinedIcon />
                 </Badge>
               </IconButton>
@@ -259,7 +261,10 @@ export default function Navbar() {
                 },
               }}
             >
-              <ShoppingCartOutlinedIcon sx={{ mr: 2 }} />
+              <Badge badgeContent={getTotalItems()} color="error" sx={{ mr: 2 }}>
+                <ShoppingCartOutlinedIcon />
+              </Badge>
+             
 
               <ListItemText
                 primary="Cart"

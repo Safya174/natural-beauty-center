@@ -7,8 +7,8 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
 import ContactUs from "./components/ContactUs/Contactus";
-
 import CartPage from "./pages/CartPage";
+import {CartProvider} from "./components/Context/CartContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <CartProvider>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route element={<MinLayout />}>
@@ -37,7 +37,7 @@ function App() {
           </Route>
         </Routes>
       </AnimatePresence>
-    </>
+    </CartProvider>
   );
 }
 

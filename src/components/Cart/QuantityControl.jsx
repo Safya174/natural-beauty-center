@@ -3,10 +3,11 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
 export default function QuantityControl({
-  quantity = 1,
+ quantity,
   onIncrease,
   onDecrease,
 }) {
+  
   return (
     <Box
       sx={{
@@ -22,7 +23,7 @@ export default function QuantityControl({
       <IconButton onClick={onDecrease}>
         <RemoveIcon />
       </IconButton>
-
+  
       <Typography
         sx={{
           minWidth: 40,

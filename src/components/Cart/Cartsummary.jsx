@@ -5,10 +5,12 @@ import Button from "@mui/material/Button";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-
 import { secondaryButton, primaryButton } from "../../Theme/buttonStyles";
+import { CartContext } from "../Context/CartContext";
+import { useContext } from "react";
 
-export default function CartSummary({ totalItems, totalPrice }) {
+export default function CartSummary() {
+  let { getTotalPrice,getTotalItems,sendOrderToWhatsApp } = useContext(CartContext);
   return (
     <Box
       sx={{
@@ -52,7 +54,7 @@ export default function CartSummary({ totalItems, totalPrice }) {
         <Typography color="text.secondary">Number of Products</Typography>
 
         <Typography fontWeight={600} color="text.primary">
-          3 Products
+          {getTotalItems()}
         </Typography>
       </Box>
 
@@ -87,7 +89,7 @@ export default function CartSummary({ totalItems, totalPrice }) {
         </Typography>
 
         <Typography variant="h4" fontWeight={700} color="primary.main">
-          550 EGP
+          {getTotalPrice()}
         </Typography>
       </Box>
 
@@ -131,6 +133,7 @@ export default function CartSummary({ totalItems, totalPrice }) {
           ...primaryButton,
           mb: 2,
         }}
+        onClick={sendOrderToWhatsApp}
       >
         Send Order via WhatsApp
       </Button>

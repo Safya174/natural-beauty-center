@@ -5,8 +5,10 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Box } from "@mui/material";
 import { primaryButton } from "../../Theme/buttonStyles";
-
+import { useContext } from "react";
+import {CartContext} from "../Context/CartContext"
 export default function ProductCard({ product }) {
+  let {addToCart} = useContext(CartContext);
   return (
     <Card
       sx={{
@@ -102,6 +104,9 @@ export default function ProductCard({ product }) {
           sx={{
             ...primaryButton,
             mt: "auto",
+          }}
+          onClick={()=>{
+            addToCart(product)
           }}
         >
           Add To Cart
