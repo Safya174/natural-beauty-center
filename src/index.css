@@ -50,10 +50,10 @@
   }
 }
 
-/*body {
-  font-family: 'Cairo', sans-serif !important;
+body {
+  overflow-x: hidden;
   margin: 0;
-}*/
+}
 * {
   font-family: 'Alexandria', sans-serif !important;
 }

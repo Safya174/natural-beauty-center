@@ -1,10 +1,13 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-
+import { useTranslation } from "react-i18next";
 import spacing from "../../../theme/spacing";
 
 export default function OurMissionContent() {
+   const { t,i18n } = useTranslation();
+   let isArbic = i18n.language == "ar"
   return (
+
     <Box
       component="section"
       sx={{
@@ -20,13 +23,13 @@ export default function OurMissionContent() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: 2,
+          letterSpacing:isArbic ? "normal" :  2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
         }}
       >
-        Our Values
+       {t("OurValues.subtitle")}
       </Typography>
       <Typography
         variant="h2"
@@ -35,9 +38,10 @@ export default function OurMissionContent() {
           fontFamily: "Alexandria",
           fontWeight: 700,
           color: "text.primary",
+          lineHeight: isArbic? 2 : 1.3
         }}
       >
-        Beauty Rooted in Nature
+        {t("OurValues.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -47,15 +51,13 @@ export default function OurMissionContent() {
           mt: 0,
           fontFamily: "Alexandria",
           fontWeight: 400,
-          lineHeight: 1.9,
+          lineHeight: 1.7,
           
           
           
         }}
       >
-        We believe that true beauty comes from the perfect balance between
-        nature, wellness, and self-care. Every step of our journey reflects our
-        commitment to purity, quality, and excellence.
+         {t("OurValues.description")}
       </Typography>
     </Box>
   );

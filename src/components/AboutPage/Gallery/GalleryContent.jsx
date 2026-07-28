@@ -1,8 +1,11 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import spacing from "../../../theme/spacing";
+import { useTranslation } from "react-i18next";
 
 export default function GalleryContent() {
+   const { t,i18n } = useTranslation();
+     let isArbic = i18n.language == "ar"
   return (
     <Box
       component="section"
@@ -18,13 +21,13 @@ export default function GalleryContent() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: 2,
+          letterSpacing: isArbic ? "normal" :  2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
         }}
       >
-        The Essence of Wellness
+        {t("InsideCenter.subtitle")}
       </Typography>
       <Typography
         variant="h2"
@@ -35,7 +38,7 @@ export default function GalleryContent() {
           color: "text.primary",
         }}
       >
-        Inside Natural Beauty Center
+       {t("InsideCenter.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -48,8 +51,7 @@ export default function GalleryContent() {
           lineHeight: 1.9,
         }}
       >
-        Explore our peaceful spaces, discover our natural products, and
-        experience beauty inspired by the purity of nature.
+         {t("InsideCenter.description")}
       </Typography>
     </Box>
   );

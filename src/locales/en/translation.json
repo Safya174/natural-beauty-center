@@ -160,9 +160,36 @@
     },
     "rights": "All rights reserved © Natural Beauty Center"
   },
-  "AboutHero":{
-  "about_us": "ABOUT US",
-  "main_heading": "True Beauty Begins with Nature",
-  "description": "We don't believe in temporary beauty. We believe in healthy beauty that starts from within, using carefully selected organic extracts and cold-pressed oils—free from harsh chemicals."
-}
+  "AboutHero": {
+    "about_us": "ABOUT US",
+    "main_heading": "True Beauty Begins with Nature",
+    "description": "We don't believe in temporary beauty. We believe in healthy beauty that starts from within, using carefully selected organic extracts and cold-pressed oils—free from harsh chemicals."
+  },
+  "OurStory": {
+    "title": "Our Story",
+    "description": "Natural Beauty Center was born from a passion for natural beauty and self-care. Inspired by nature and built on years of experience, we combine organic ingredients with modern beauty expertise to create a warm, personalized experience where every client feels confident, refreshed, and naturally beautiful.",
+    "button": "Explore Our Products"
+  },
+  "OurValues": {
+    "subtitle": "OUR VALUES",
+    "title": "Beauty Rooted in Nature",
+    "description": "We believe that true beauty comes from the perfect balance between nature, wellness, and self-care. Every step of our journey reflects our commitment to purity, quality, and excellence."
+  },
+  "OurMissionAndVision": {
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our mission is to provide a natural beauty experience built on carefully selected botanical ingredients, personalized care, and professional expertise. We are committed to helping every client achieve healthy, radiant skin and beautiful hair while embracing the power of nature in every step of the journey."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Our vision is to become a trusted destination for natural beauty, where organic care, innovation, and authenticity come together. We strive to inspire confidence by offering premium natural products and personalized beauty experiences that celebrate the beauty of nature."
+    }
+   
+  },
+  "InsideCenter": {
+    "subtitle": "THE ESSENCE OF WELLNESS",
+    "title": "Inside Natural Beauty Center",
+    "description": "Explore our peaceful spaces, discover our fine apothecary treasures, and experience beauty inspired by the purity of nature."
+  }
+  
 }

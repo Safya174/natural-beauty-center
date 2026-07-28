@@ -4,16 +4,15 @@ import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 export  const values = [
   {
     id: 1,
-    title: "Our Mission",
+    title: "OurMissionAndVision.mission.title",
     icon: <FlagRoundedIcon sx={{ fontSize: 42 }} />,
-    description:
-      "Our mission is to provide a natural beauty experience built on carefully selected botanical ingredients, personalized care, and professional expertise. We are committed to helping every client achieve healthy, radiant skin and beautiful hair while embracing the power of nature in every step of the journey.",
+    description:"OurMissionAndVision.mission.description"
+     
   },
   {
     id: 2,
-    title: "Our Vision",
+    title: "OurMissionAndVision.vision.title",
     icon: <VisibilityRoundedIcon sx={{ fontSize: 42 }} />,
-    description:
-      "Our vision is to become a trusted destination for natural beauty, where organic care, innovation, and authenticity come together. We strive to inspire confidence by offering premium natural products and personalized beauty experiences that celebrate the beauty of nature.",
+    description:"OurMissionAndVision.vision.description"
   },
 ];

@@ -3,8 +3,11 @@ import Typography from "@mui/material/Typography";
 import { primaryButton } from "../../../Theme/buttonStyles";
 import Button from "@mui/material/Button";
 import spacing from "../../../theme/spacing";
+import { useTranslation } from "react-i18next";
 
 export default function OurStoryContent() {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="section"
@@ -25,7 +28,7 @@ export default function OurStoryContent() {
           color: "text.primary",
         }}
       >
-        Our Story
+        {t("OurStory.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -38,11 +41,7 @@ export default function OurStoryContent() {
           lineHeight: 1.9,
         }}
       >
-        Natural Beauty Center was born from a passion for natural beauty and
-        self-care. Inspired by nature and built on years of experience, we
-        combine organic ingredients with modern beauty expertise to create a
-        warm, personalized experience where every client feels confident,
-        refreshed, and naturally beautiful
+        {t("OurStory.description")}
       </Typography>
       <Button
         variant="outlined"
@@ -51,7 +50,7 @@ export default function OurStoryContent() {
           mt: 2,
         }}
       >
-        Explore Our Products
+        {t("OurStory.button")}
       </Button>
     </Box>
   );

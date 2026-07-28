@@ -11,22 +11,24 @@ export default function AboutHero() {
       sx={{
         backgroundImage: `url(${BackgroundImg})`,
         backgroundSize: "cover",
-       
+        backgroundPosition:"center",
+        
         backgroundRepeat: "no-repeat",
-        minHeight: "100vh",
+        height: "100vh",
+        
       }}
     >
     
 
-      <Container
+       <Container
         maxWidth="xl"
         sx={{
-          pt: 8,
+          pt: { xs: 4, md: 8 },
+          // 🟢 بدال ما نحدد left/right، بنستخدم px مع زيادة بسيطة للأمان في العربي
           px: {
-            xs: 2,
-            sm: 3,
-            md: 5,
-            lg: 5,
+            xs: 2.5,
+            sm: 4,
+            md: 6,
           },
         }}
       >

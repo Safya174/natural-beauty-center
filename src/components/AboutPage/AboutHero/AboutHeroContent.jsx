@@ -13,16 +13,21 @@ export default function AboutHeroContent() {
         display: "flex",
         flexDirection: "column",
         gap: spacing.hero.contentGap,
+        maxWidth: { xs: "100%", md: "620px" },
+        mr:{xs : 0 , md:isArabic? 12 : 8 },
+      
+        width: "100%"
+
       }}
     >
       <Typography
         variant="overline"
-        color="primary.main"
         sx={{
           fontFamily: "Alexandria",
           fontSize: ".95rem",
-          fontWeight: 400,
-          letterSpacing: ".35em",
+          fontWeight: 700,
+          letterSpacing: isArabic ? "normal" : ".35em",
+          color: isArabic ? "#3E6B39" : "primary.main",
           mt: 2,
         }}
       >
@@ -31,8 +36,16 @@ export default function AboutHeroContent() {
 
       <Typography
         variant="h1"
-        color="text.primary"
-        sx={{ mt: 0, mb: 0, fontFamily: "Alexandria", lineHeight: 1 }}
+        sx={{
+          mt: 0,
+          mb: 0,
+          lineHeight: isArabic ? 1.35 : 1.2,
+
+          color: isArabic ? "#1A2E17" : "text.primary",
+          textShadow: isArabic
+            ? "0px 1px 3px rgba(255, 255, 255, 0.6)"
+            : "none",
+        }}
       >
         {t("AboutHero.main_heading")}
       </Typography>
@@ -40,10 +53,13 @@ export default function AboutHeroContent() {
       <Typography
         variant="body1"
         color="text.secondary"
-        sx={{
-          maxWidth: "35rem",
+          sx={{
+          maxWidth: "38rem",
           mt: 0,
-          fontFamily: "Alexandria",
+          lineHeight: 1.8,
+          
+          color: isArabic ? "#3A4D39" : "text.secondary",
+          fontWeight: isArabic ? 500 : 400, 
         }}
       >
         {t("AboutHero.description")}
