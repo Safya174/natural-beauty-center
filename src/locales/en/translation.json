@@ -184,12 +184,20 @@
       "title": "Our Vision",
       "description": "Our vision is to become a trusted destination for natural beauty, where organic care, innovation, and authenticity come together. We strive to inspire confidence by offering premium natural products and personalized beauty experiences that celebrate the beauty of nature."
     }
-   
   },
   "InsideCenter": {
     "subtitle": "THE ESSENCE OF WELLNESS",
     "title": "Inside Natural Beauty Center",
     "description": "Explore our peaceful spaces, discover our fine apothecary treasures, and experience beauty inspired by the purity of nature."
+  },
+
+  "sessionsHero": {
+    "tagline": "Our Services",
+    "title": "Natural Sessions Tailored for Your Well-being",
+    "description": "Discover specialized herbal care sessions for healthier hair, glowing skin, and holistic well-being through safe, natural, and personalized care.",
+    "buttons": {
+      "bookSession": "Book a Session",
+      "contactWhatsapp": "Contact via WhatsApp"
+    }
   }
-  
 }

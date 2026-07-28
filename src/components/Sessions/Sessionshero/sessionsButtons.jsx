@@ -1,9 +1,9 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { secondaryButton, primaryButton } from "../../Theme/buttonStyles";
+import { secondaryButton, primaryButton } from "../../../Theme/buttonStyles";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-export default function HeroButtons() {
+export default function SessionsButtons() {
   const { t } = useTranslation();
 
   return (

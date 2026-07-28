@@ -112,16 +112,22 @@ export default function ContactMap() {
 
         <Button
           variant="contained"
+          component="a"
+          href={`https://wa.me/201033438385?text=${encodeURIComponent(
+            "مرحباً، أود الاستفسار عن خدمات ومقتنيات Natural Beauty Center",
+          )}`}
+          rel="noopener noreferrer"
+          target="_blank"
           startIcon={<WhatsAppIcon />}
           sx={{
             ...primaryButton,
             mt: 4,
             px: 5,
             py: 1.5,
-            gap: 1.5
+            gap: 1.5,
           }}
         >
-            {t("contact.booking.whatsappBtn")}
+          {t("contact.booking.whatsappBtn")}
         </Button>
       </Box>
     </Box>

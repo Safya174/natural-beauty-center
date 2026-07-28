@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 
 import FooterBrand from "./FooterBrand";
 import FooterLinks from "./FooterLinks";
-
+import { NavLink } from "react-router-dom";
 import { primaryButton } from "../../Theme/buttonStyles";
 import { useTranslation } from "react-i18next";
 
@@ -44,6 +44,8 @@ export default function FooterSection() {
           >
             <Button
               variant="contained"
+              component={NavLink}
+              to="/sessions"
               sx={primaryButton}
             >
               {t("footer.buttons.bookSession")}
@@ -51,6 +53,10 @@ export default function FooterSection() {
 
             <Button
               variant="outlined"
+              component="a"
+              href="https://www.facebook.com/profile.php?id=61568555338359"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 px: 4,
                 py: 1.3,

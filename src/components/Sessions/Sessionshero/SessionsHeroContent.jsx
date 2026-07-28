@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import HeroButtons from "./HeroButtons";
-import spacing from "../../theme/spacing";
+import SessionsButtons from "./sessionsButtons";
+import spacing from "../../../theme/spacing";
 import { useTranslation } from "react-i18next";
 
-export default function HeroContent() {
+export default function SessionsContent() {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
 
@@ -32,7 +32,7 @@ export default function HeroContent() {
           mt: 1,
         }}
       >
-       NATURAL BEAUTY CENTER
+       {t("sessionsHero.tagline")}
 
       </Typography>
 
@@ -48,7 +48,7 @@ export default function HeroContent() {
           textShadow: isArabic ? "0px 1px 3px rgba(255, 255, 255, 0.6)" : "none",
         }}
       >
-        {t("hero.title")}
+        {t("sessionsHero.title")}
       </Typography>
 
       {/* النص الوصفي */}
@@ -58,16 +58,16 @@ export default function HeroContent() {
           maxWidth: "38rem",
           mt: 0,
           lineHeight: 1.8,
-          // 🟢 درجة افتح وأوضح في العربي
+         
           color: isArabic ? "#3A4D39" : "text.secondary",
-          fontWeight: isArabic ? 500 : 400, // زيادة سمك بسيط لثبات الحروف
+          fontWeight: isArabic ? 500 : 400, 
         }}
       >
-        {t("hero.description")}
+        {t("sessionsHero.description")}
       </Typography>
 
-      {/* الأزرار */}
-      <HeroButtons />
+      
+      <SessionsButtons />
     </Box>
   );
 }

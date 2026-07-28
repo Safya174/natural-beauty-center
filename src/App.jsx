@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
 import ContactUs from "./components/ContactUs/Contactus";
 import CartPage from "./pages/CartPage";
+import SessionsPage from "./pages/SessionsPage";
 import {CartProvider} from "./components/Context/CartContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,6 +34,7 @@ function App() {
             <Route path="about" element={<AboutPage />} />
             <Route path="contact" element={<ContactUs />} />
             <Route path="products" element={<ProductPage />} />
+             <Route path="sessions" element={<SessionsPage />} />
             <Route path="cart" element={<CartPage />} />
           </Route>
         </Routes>

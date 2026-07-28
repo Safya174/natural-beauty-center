@@ -4,7 +4,7 @@ import { primaryButton } from "../../../Theme/buttonStyles";
 import Button from "@mui/material/Button";
 import spacing from "../../../theme/spacing";
 import { useTranslation } from "react-i18next";
-
+import { NavLink } from "react-router-dom";
 export default function OurStoryContent() {
   const { t } = useTranslation();
 
@@ -45,6 +45,8 @@ export default function OurStoryContent() {
       </Typography>
       <Button
         variant="outlined"
+        component={NavLink}
+        to="/products"
         sx={{
           ...primaryButton,
           mt: 2,

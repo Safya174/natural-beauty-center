@@ -13,6 +13,7 @@ import {
   ListItemButton,
   ListItemText,
   Badge,
+  CardMedia,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -27,7 +28,6 @@ export default function Navbar() {
   const [openDrawer, setOpenDrawer] = React.useState(false);
   const { getTotalItems } = useContext(CartContext);
   const { t, i18n } = useTranslation();
-
 
   const pages = [
     { title: t("nav.home"), path: "/" },
@@ -63,7 +63,7 @@ export default function Navbar() {
             sx={{
               height: 70,
               justifyContent: "space-between",
-             px: { xs: 2.5, sm: 3 },
+              px: { xs: 2.5, sm: 3 },
             }}
           >
             {/* Logo + Name */}
@@ -73,15 +73,16 @@ export default function Navbar() {
                 alignItems: "center",
                 gap: 1,
                 minWidth: 0,
-                pr: i18n.language === "ar" ? 1 : 0
+                pr: i18n.language === "ar" ? 1 : 0,
               }}
             >
-              <img
-                src={logo}
+              <CardMedia
+                component="img" 
+                image={logo}
                 alt="logo"
-                style={{
-                  width: 70,
-                  height: 70,
+                sx={{
+                  width: { xs: 45, sm: 55, md: 72 }, 
+                  height: { xs: 45, sm: 55, md: 72 },
                   objectFit: "contain",
                   borderRadius: "50%",
                   flexShrink: 0,
@@ -146,12 +147,16 @@ export default function Navbar() {
               {/* Language Button */}
               <Button
                 onClick={handleLanguageChange}
-                startIcon={<LanguageIcon sx={{ fontSize: "1.2rem !important" }} />}
+                
+                startIcon={
+                  <LanguageIcon sx={{ fontSize: "1.2rem !important" }} />
+                }
                 sx={{
                   color: "primary.main",
                   minWidth: "auto",
                   px: 1,
                   py: 0.5,
+                  gap: i18n.language == "ar"? 1.3 : 0,
                   fontWeight: 700,
                   fontSize: "0.8rem",
                   borderRadius: 2,
@@ -160,7 +165,7 @@ export default function Navbar() {
                   },
                 }}
               >
-                {i18n.language === "ar" ? "EN" : "ع"}
+                {i18n.language === "ar" ? "EN" : "Ar"}
               </Button>
 
               {/* Cart Desktop */}
@@ -179,6 +184,7 @@ export default function Navbar() {
                     bgcolor: "secondary.main",
                     color: "primary.main",
                   },
+                  mx:2
                 }}
               >
                 <Badge badgeContent={getTotalItems()} color="error">
@@ -188,6 +194,8 @@ export default function Navbar() {
 
               {/* Book Session Desktop */}
               <Button
+                component={NavLink}
+                to="/sessions"
                 variant="contained"
                 sx={{
                   display: { xs: "none", md: "inline-flex" },
@@ -279,7 +287,11 @@ export default function Navbar() {
                   },
                 }}
               >
-                <Badge badgeContent={getTotalItems()} color="error" sx={{ mr: 2 }}>
+                <Badge
+                  badgeContent={getTotalItems()}
+                  color="error"
+                  sx={{ mr: 2 }}
+                >
                   <ShoppingCartOutlinedIcon />
                 </Badge>
                 <ListItemText

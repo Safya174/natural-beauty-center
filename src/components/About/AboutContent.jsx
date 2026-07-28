@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import { primaryButton } from "../../Theme/buttonStyles";
 import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
-
+import { NavLink } from "react-router-dom";
 export default function AboutContent() {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
@@ -51,7 +51,7 @@ export default function AboutContent() {
         sx={{
           maxWidth: "42rem",
           fontWeight: 400,
-          lineHeight: isArabic ? 1.9 : 1.7, 
+          lineHeight: isArabic ? 1.9 : 1.7,
         }}
       >
         {t("About.description")}
@@ -60,9 +60,10 @@ export default function AboutContent() {
       {/* الزرار */}
       <Button
         variant="outlined"
+        component={NavLink}
+        to="/about"
         sx={{
           ...primaryButton,
-         
         }}
       >
         {t("About.Discoveryourstory")}

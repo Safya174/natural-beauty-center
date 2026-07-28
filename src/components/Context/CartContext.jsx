@@ -56,7 +56,6 @@ export const CartProvider = ({ children }) => {
   function sendOrderToWhatsApp() {
     let phone = "201033438385";
 
-    // 1️⃣ تنسيق المنتجات بشكل واضح ومرتب
     let itemtext = cart
       .map(
         (item, index) =>
@@ -64,7 +63,6 @@ export const CartProvider = ({ children }) => {
       )
       .join("\n\n");
 
-    // 2️⃣ تجميع الرسالة بتنسيق خطوط أنيق يظهر ممتاز في الواتساب
     const fullMessage =
       `*طلب جديد من الموقع*\n` +
       `=========================\n\n` +
@@ -75,10 +73,10 @@ export const CartProvider = ({ children }) => {
       `=========================\n\n` +
       `برجاء تأكيد الطلب والتوصيل.`;
 
-    // 3️⃣ التشفير والفتح
     let safeMessage = encodeURIComponent(fullMessage);
     window.open(`https://wa.me/${phone}?text=${safeMessage}`, "_blank");
   }
+
   return (
     <CartContext.Provider
       value={{
