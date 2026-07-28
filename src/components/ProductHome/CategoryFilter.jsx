@@ -2,10 +2,10 @@ import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import { categories } from "./categories";
-
+import { useTranslation } from "react-i18next";
 export default function Filters() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-
+  const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -64,7 +64,7 @@ export default function Filters() {
             },
           }}
         >
-          {category.name}
+           {t(category.nameKey)}
         </Button>
       ))}
     </Box>

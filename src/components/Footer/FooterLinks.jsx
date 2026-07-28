@@ -1,15 +1,17 @@
 import { Box, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const pages = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  { title: "Sessions", path: "/sessions" },
-  { title: "Products", path: "/products" },
-  { title: "Contact", path: "/contact" },
-];
 
 export default function FooterLinks() {
+  const { t,i18n } = useTranslation();
+  const pages = [
+  { title: t("nav.home"), path: "/" },
+  { title: t("nav.about"), path: "/about" },
+  { title: t("nav.sessions"), path: "/sessions" },
+  { title:t("nav.products") , path: "/products" },
+  { title: t("nav.contact") , path: "/contact" },
+];
   return (
     <Box
       sx={{
@@ -21,6 +23,7 @@ export default function FooterLinks() {
         gap: 2,
       }}
     >
+      
       {pages.map((page) => (
         <Button
           key={page.title}

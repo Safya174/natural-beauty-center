@@ -4,15 +4,24 @@ import QuantityControl from "./QuantityControl";
 import CardMedia from "@mui/material/CardMedia";
 import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function CartItem() {
-  let { cart, updateQuantity, deleteProduct } = useContext(CartContext);
+  const { cart, updateQuantity, deleteProduct } = useContext(CartContext);
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+
+  // دالة تحويل الأرقام حسب اللغة الحالية
+  const formatPrice = (price) => {
+    if (price === undefined || price === null) return "";
+    return new Intl.NumberFormat(isArabic ? "ar-EG" : "en-US").format(price);
+  };
 
   return (
     <>
       {cart.map((item) => (
         <Card
-          key={item.id} // 👈 1. ضفنا الـ key هنا ضروري جداً
+          key={item.id}
           elevation={0}
           sx={{
             p: 3,
@@ -21,7 +30,7 @@ export default function CartItem() {
             border: "1px solid",
             borderColor: "divider",
             minHeight: 220,
-            mb: 2, // ضفتلك مسافة بسيطة بين كل كارت والتاني
+            mb: 2,
             transition: ".35s",
 
             "&:hover": {
@@ -38,7 +47,7 @@ export default function CartItem() {
               gap: 4,
             }}
           >
-            {/* Left Side */}
+            {/* Left Side / البيانات والمعلومات */}
             <Box
               sx={{
                 flex: 1,
@@ -46,7 +55,7 @@ export default function CartItem() {
                 flexDirection: "column",
               }}
             >
-              {/* Delete */}
+              {/* Delete / زر الحذف */}
               <IconButton
                 sx={{
                   alignSelf: "flex-start",
@@ -59,13 +68,14 @@ export default function CartItem() {
                 <DeleteOutlineTwoToneIcon />
               </IconButton>
 
-              {/* Category */}
-              <Typography variant="caption" color="text.secondary">
-                {item.category}{" "}
-                {/* 👈 2. عدلناها من cart.category لـ item.category */}
-              </Typography>
+              {/* Category / القسم مترجم */}
+              {item.categoryKey && (
+                <Typography variant="caption" color="text.secondary">
+                  {t(item.categoryKey)}
+                </Typography>
+              )}
 
-              {/* Name */}
+              {/* Name / اسم المنتج مترجم */}
               <Typography
                 variant="h5"
                 sx={{
@@ -74,22 +84,23 @@ export default function CartItem() {
                   mt: 1,
                 }}
               >
-                {item.name}
+                {t(item.nameKey)}
               </Typography>
 
-              {/* Price */}
+              {/* Price / السعر مترجم بالأرقام والعملة */}
               <Typography
                 variant="h6"
                 color="primary.main"
                 sx={{
                   fontWeight: 700,
                   mt: 2,
+                  direction: isArabic ? "rtl" : "ltr",
                 }}
               >
-                {item.price} EGP
+                {formatPrice(item.price)} {t("productsSection.currency")}
               </Typography>
 
-              {/* Quantity */}
+              {/* Quantity / التحكم بالكمية */}
               <Box sx={{ mt: 3 }}>
                 <QuantityControl
                   quantity={item.quantity}
@@ -105,12 +116,12 @@ export default function CartItem() {
               </Box>
             </Box>
 
-            {/* Image */}
+            {/* Image / صورة المنتج */}
             <Box sx={{ borderRadius: 4 }}>
               <CardMedia
                 component="img"
                 src={item.image}
-                alt={item.name}
+                alt={t(item.nameKey || item.name)}
                 sx={{
                   width: 140,
                   height: 140,

@@ -1,8 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { primaryButton } from "../../Theme/buttonStyles";
-
+import { useTranslation } from "react-i18next";
 export default function ContactMap() {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   return (
     <Box>
       {/* Section Title */}
@@ -13,14 +15,14 @@ export default function ContactMap() {
           textAlign: "center",
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: 2,
+          letterSpacing: isArabic ? "normal" : 2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
           mt: 8,
         }}
       >
-        Visit Our Center
+        {t("contact.location.subtitle")}
       </Typography>
 
       <Typography
@@ -34,7 +36,7 @@ export default function ContactMap() {
           mb: 4,
         }}
       >
-        Find Us in El Nozha, Cairo
+        {t("contact.location.title")}
       </Typography>
 
       {/* Google Map */}
@@ -77,7 +79,7 @@ export default function ContactMap() {
             fontWeight: 600,
           }}
         >
-          Ready to Book?
+          {t("contact.booking.subtitle")}
         </Typography>
 
         <Typography
@@ -92,7 +94,7 @@ export default function ContactMap() {
             mt: 1,
           }}
         >
-          Let's Begin Your Natural Beauty Journey
+          {t("contact.booking.title")}
         </Typography>
 
         <Typography
@@ -105,9 +107,7 @@ export default function ContactMap() {
             lineHeight: 1.8,
           }}
         >
-          Book your appointment directly through WhatsApp. Our specialists are
-          ready to answer your questions and help you choose the perfect
-          treatment for your needs.
+          {t("contact.booking.description")}
         </Typography>
 
         <Button
@@ -118,9 +118,10 @@ export default function ContactMap() {
             mt: 4,
             px: 5,
             py: 1.5,
+            gap: 1.5
           }}
         >
-          Chat on WhatsApp
+            {t("contact.booking.whatsappBtn")}
         </Button>
       </Box>
     </Box>

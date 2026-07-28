@@ -1,8 +1,10 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import spacing from "../../theme/spacing";
-
+import { useTranslation } from "react-i18next";
 export default function TestimonialsHeader() {
+    const { t,i18n  } = useTranslation();
+    let isArabic = i18n.language == "ar";
   return (
     <Box
       component="section"
@@ -18,13 +20,13 @@ export default function TestimonialsHeader() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: 2,
+          letterSpacing: isArabic ? "normal":2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
         }}
       >
-        Testimonials
+          {t("testimonials.subtitle")}
       </Typography>
       <Typography
         variant="h2"
@@ -35,7 +37,7 @@ export default function TestimonialsHeader() {
           color: "text.primary",
         }}
       >
-        What Our Clients Say
+        {t("testimonials.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -45,12 +47,12 @@ export default function TestimonialsHeader() {
           mt: 0,
           fontFamily: "Alexandria",
           fontWeight: 400,
-          lineHeight: 1.9,
+          lineHeight: isArabic ? 2 : 1.9,
          
         }}
       >
+         {t("testimonials.description")}
     
-        Real experiences from clients who trusted Natural Beauty Center.
       </Typography>
     
     </Box>

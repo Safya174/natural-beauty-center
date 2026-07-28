@@ -1,51 +1,72 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-
 import HeroButtons from "./HeroButtons";
 import spacing from "../../theme/spacing";
+import { useTranslation } from "react-i18next";
 
 export default function HeroContent() {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+
   return (
     <Box
       component="section"
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: spacing.hero.contentGap,
-       
+        gap: spacing.hero.contentGap || 2,
+        maxWidth: { xs: "100%", md: "620px" },
+        textAlign: "start",
       }}
     >
+      {/* اسم البراند فوق */}
       <Typography
         variant="overline"
-        color="primary.main"
         sx={{
-          fontFamily: "Alexandria",
-          fontSize: "2rem",
-        
-          letterSpacing: "3px",
-          mt:2
+          fontFamily: "'Alexandria', sans-serif",
+          fontSize: { xs: "0.95rem", sm: "1.1rem" },
+          fontWeight: 700,
+          letterSpacing: isArabic ? "normal" : "3px",
+      
+          color: isArabic ? "#3E6B39" : "primary.main",
+          mt: 1,
         }}
       >
-        Natural Beauty Center
+       NATURAL BEAUTY CENTER
+
       </Typography>
 
-      <Typography variant="h1" color="text.primary" sx={{mt:0,mb:0}}>
-        Your True Beauty Begins with Nature
+      {/* العنوان الرئيسي */}
+      <Typography
+        variant="h1"
+        sx={{
+          mt: 0,
+          mb: 0,
+          lineHeight: isArabic ? 1.35 : 1.2,
+          
+          color: isArabic ? "#1A2E17" : "text.primary",
+          textShadow: isArabic ? "0px 1px 3px rgba(255, 255, 255, 0.6)" : "none",
+        }}
+      >
+        {t("hero.title")}
       </Typography>
 
+      {/* النص الوصفي */}
       <Typography
         variant="body1"
-        color="text.secondary"
         sx={{
           maxWidth: "38rem",
-          mt:0
+          mt: 0,
+          lineHeight: 1.8,
+          // 🟢 درجة افتح وأوضح في العربي
+          color: isArabic ? "#3A4D39" : "text.secondary",
+          fontWeight: isArabic ? 500 : 400, // زيادة سمك بسيط لثبات الحروف
         }}
       >
-        Where timeless natural care meets modern expertise, offering
-        personalized experiences that help restore balance, confidence, and
-        healthy beauty.
+        {t("hero.description")}
       </Typography>
 
+      {/* الأزرار */}
       <HeroButtons />
     </Box>
   );

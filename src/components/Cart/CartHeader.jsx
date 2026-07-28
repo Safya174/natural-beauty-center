@@ -1,15 +1,18 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import spacing from "../../theme/spacing";
-
+import { useTranslation } from "react-i18next";
 export default function CartContent() {
+    const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+  
   return (
     <Box
       component="section"
       sx={{
         display: "flex",
         flexDirection: "column",
-      
+
         alignItems: "center",
         py: spacing.section.py,
       }}
@@ -23,7 +26,7 @@ export default function CartContent() {
           color: "text.primary",
         }}
       >
-        Shopping Cart
+        {t("cart.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -33,11 +36,10 @@ export default function CartContent() {
           mt: 0,
           fontFamily: "Alexandria",
           fontWeight: 400,
-          lineHeight: 1.9,
+          lineHeight: isArabic ? 3 : 1.9,
         }}
       >
-        Take a moment to review your selected natural products before placing
-        your order through WhatsApp.
+        {t("cart.description")}
       </Typography>
     </Box>
   );

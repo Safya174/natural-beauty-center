@@ -5,27 +5,27 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 
 export const features = [
   {
+    id: 1,
     icon: <SpaOutlinedIcon fontSize="large" />,
-    title: "Natural Products",
-    description:
-      "Crafted from carefully selected botanical ingredients for everyday care.",
+    titleKey: "whyUs.features.naturalProducts.title",
+    descKey: "whyUs.features.naturalProducts.description",
   },
   {
+    id: 2,
     icon: <LocalFloristOutlinedIcon fontSize="large" />,
-    title: "Organic Ingredients",
-    description:
-      "Gentle formulas made with high-quality natural and organic extracts.",
+    titleKey: "whyUs.features.organicIngredients.title",
+    descKey: "whyUs.features.organicIngredients.description",
   },
   {
+    id: 3,
     icon: <WorkspacePremiumOutlinedIcon fontSize="large" />,
-    title: "Trusted Experience",
-    description:
-      "Years of expertise dedicated to providing premium natural beauty solutions.",
+    titleKey: "whyUs.features.trustedExperience.title",
+    descKey: "whyUs.features.trustedExperience.description",
   },
   {
+    id: 4,
     icon: <FavoriteBorderOutlinedIcon fontSize="large" />,
-    title: "Personalized Care",
-    description:
-      "Every recommendation is tailored to your unique beauty and wellness goals.",
+    titleKey: "whyUs.features.personalizedCare.title",
+    descKey: "whyUs.features.personalizedCare.description",
   },
 ];

@@ -1,10 +1,11 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-
-
+import { useTranslation } from "react-i18next";
 import spacing from "../../../theme/spacing";
 
 export default function AboutHeroContent() {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   return (
     <Box
       component="section"
@@ -25,11 +26,15 @@ export default function AboutHeroContent() {
           mt: 2,
         }}
       >
-        About Us
+        {t("AboutHero.about_us")}
       </Typography>
 
-      <Typography variant="h1" color="text.primary" sx={{ mt: 0, mb: 0,fontFamily: "Alexandria",lineHeight:1 }}>
-        True Beauty Begins with Nature
+      <Typography
+        variant="h1"
+        color="text.primary"
+        sx={{ mt: 0, mb: 0, fontFamily: "Alexandria", lineHeight: 1 }}
+      >
+        {t("AboutHero.main_heading")}
       </Typography>
 
       <Typography
@@ -40,14 +45,9 @@ export default function AboutHeroContent() {
           mt: 0,
           fontFamily: "Alexandria",
         }}
-        
       >
-        We don't believe in temporary beauty. We believe in healthy beauty that
-        starts from within, using carefully selected organic extracts and
-        cold-pressed oils—free from harsh chemicals.
+        {t("AboutHero.description")}
       </Typography>
-
-    
     </Box>
   );
 }

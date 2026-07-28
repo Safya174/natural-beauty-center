@@ -1,8 +1,9 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import spacing from "../../theme/spacing";
-
+import { useTranslation } from "react-i18next";
 export default function WhyChoosContent() {
+   const { t } = useTranslation();
   return (
     <Box
       component="section"
@@ -25,7 +26,7 @@ export default function WhyChoosContent() {
           fontWeight: 600,
         }}
       >
-        Our distinction lies in the details
+       {t("whyUs.subtitle")}
       </Typography>
       <Typography
         variant="h2"
@@ -36,7 +37,7 @@ export default function WhyChoosContent() {
           color: "text.primary",
         }}
       >
-        Why Choose Natural Beauty Center?
+        {t("whyUs.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -50,8 +51,7 @@ export default function WhyChoosContent() {
          
         }}
       >
-        We combine the power of nature with years of expertise to deliver
-        personalized beauty solutions that help you look and feel your best.
+       {t("whyUs.description")}
       </Typography>
     </Box>
   );

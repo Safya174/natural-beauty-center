@@ -1,8 +1,9 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import spacing from "../../theme/spacing";
-
+import { useTranslation } from "react-i18next";
 export default function ProductContent() {
+  const { t } = useTranslation();
   return (
     <Box
       component="section"
@@ -22,7 +23,7 @@ export default function ProductContent() {
           color: "text.primary",
         }}
       >
-        Nature's Collection
+        {t("productsSection.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -35,9 +36,7 @@ export default function ProductContent() {
           lineHeight: 1.9,
         }}
       >
-        Explore our collection of carefully selected herbs, natural oils,
-        botanical ingredients, and traditional wellness products inspired by
-        nature.
+        {t("productsSection.description")}
       </Typography>
     </Box>
   );

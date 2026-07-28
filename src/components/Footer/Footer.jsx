@@ -7,14 +7,17 @@ import FooterBrand from "./FooterBrand";
 import FooterLinks from "./FooterLinks";
 
 import { primaryButton } from "../../Theme/buttonStyles";
+import { useTranslation } from "react-i18next";
 
 export default function FooterSection() {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="footer"
       sx={{
-        p:2,
-        backgroundColor:"#E7F3E5",
+        p: 2,
+        backgroundColor: "#E7F3E5",
         borderTop: "1px solid",
         borderColor: "rgba(74,107,60,.12)",
       }}
@@ -43,7 +46,7 @@ export default function FooterSection() {
               variant="contained"
               sx={primaryButton}
             >
-              Book Session
+              {t("footer.buttons.bookSession")}
             </Button>
 
             <Button
@@ -68,7 +71,7 @@ export default function FooterSection() {
                 },
               }}
             >
-              Follow us on Facebook
+              {t("footer.buttons.followFacebook")}
             </Button>
           </Grid>
         </Grid>

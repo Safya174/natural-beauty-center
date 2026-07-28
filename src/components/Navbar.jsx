@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   AppBar,
   Box,
@@ -17,26 +17,36 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import LanguageIcon from "@mui/icons-material/Language";
+import { useTranslation } from "react-i18next";
 import { CartContext } from "./Context/CartContext";
-import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/photo_2026-07-01_19-34-12.jpg";
 
-const pages = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  { title: "Sessions", path: "/sessions" },
-  { title: "Products", path: "/products" },
-  { title: "Contact", path: "/contact" },
-];
-
 export default function Navbar() {
   const [openDrawer, setOpenDrawer] = React.useState(false);
+  const { getTotalItems } = useContext(CartContext);
+  const { t, i18n } = useTranslation();
+
+
+  const pages = [
+    { title: t("nav.home"), path: "/" },
+    { title: t("nav.about"), path: "/about" },
+    { title: t("nav.sessions"), path: "/sessions" },
+    { title: t("nav.products"), path: "/products" },
+    { title: t("nav.contact"), path: "/contact" },
+  ];
 
   const toggleDrawer = (value) => {
     setOpenDrawer(value);
   };
-     let { getTotalItems } = useContext(CartContext);
+
+  const handleLanguageChange = () => {
+    const nextLang = i18n.language === "ar" ? "en" : "ar";
+    i18n.changeLanguage(nextLang);
+    document.dir = nextLang === "ar" ? "rtl" : "ltr";
+  };
+
   return (
     <>
       <AppBar
@@ -48,37 +58,43 @@ export default function Navbar() {
           borderColor: "#E7F3E5",
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" disableGutters>
           <Toolbar
             sx={{
-              height: 75,
+              height: 70,
               justifyContent: "space-between",
+             px: { xs: 2.5, sm: 3 },
             }}
           >
-            {/* Logo */}
-
+            {/* Logo + Name */}
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: 1.5,
-                height: "100%",
+                gap: 1,
+                minWidth: 0,
+                pr: i18n.language === "ar" ? 1 : 0
               }}
             >
               <img
                 src={logo}
                 alt="logo"
                 style={{
-                  width: 75,
-                  height: "100%",
+                  width: 70,
+                  height: 70,
+                  objectFit: "contain",
+                  borderRadius: "50%",
+                  flexShrink: 0,
                 }}
               />
 
               <Typography
-                variant="h5"
+                variant="h6"
+                noWrap
                 sx={{
                   color: "primary.main",
                   fontWeight: 700,
+                  fontSize: { xs: "0.9rem", sm: "1.2rem" },
                 }}
               >
                 Natural Beauty Center
@@ -86,19 +102,15 @@ export default function Navbar() {
             </Box>
 
             {/* Desktop Links */}
-
             <Box
               sx={{
-                display: {
-                  xs: "none",
-                  md: "flex",
-                },
+                display: { xs: "none", md: "flex" },
                 gap: 1,
               }}
             >
               {pages.map((page) => (
                 <Button
-                  key={page.title}
+                  key={page.path}
                   component={NavLink}
                   to={page.path}
                   sx={{
@@ -123,42 +135,46 @@ export default function Navbar() {
               ))}
             </Box>
 
-            {/* Right Side */}
-
+            {/* Right Side Control Panel */}
             <Box
               sx={{
-                display: {
-                  xs: "none",
-                  md: "flex",
-                },
-
+                display: "flex",
                 alignItems: "center",
-                gap: 1,
+                gap: 0.5,
               }}
             >
+              {/* Language Button */}
               <Button
+                onClick={handleLanguageChange}
+                startIcon={<LanguageIcon sx={{ fontSize: "1.2rem !important" }} />}
                 sx={{
-                  color: "text.primary",
-                  fontWeight: 600,
+                  color: "primary.main",
+                  minWidth: "auto",
+                  px: 1,
+                  py: 0.5,
+                  fontWeight: 700,
+                  fontSize: "0.8rem",
+                  borderRadius: 2,
+                  "&:hover": {
+                    bgcolor: "rgba(0,0,0,0.04)",
+                  },
                 }}
               >
-                EN
+                {i18n.language === "ar" ? "EN" : "ع"}
               </Button>
 
-              {/* Cart */}
-
+              {/* Cart Desktop */}
               <IconButton
                 component={NavLink}
                 to="/cart"
                 sx={{
+                  display: { xs: "none", md: "flex" },
                   color: "text.primary",
                   borderRadius: 3,
-
                   "&:hover": {
                     bgcolor: "secondary.main",
                     color: "primary.main",
                   },
-
                   "&.active": {
                     bgcolor: "secondary.main",
                     color: "primary.main",
@@ -170,74 +186,104 @@ export default function Navbar() {
                 </Badge>
               </IconButton>
 
+              {/* Book Session Desktop */}
               <Button
                 variant="contained"
                 sx={{
+                  display: { xs: "none", md: "inline-flex" },
                   bgcolor: "primary.main",
                   color: "#fff",
                   borderRadius: 3,
                   px: 3,
                   py: 1.2,
                   boxShadow: "none",
-
                   "&:hover": {
                     bgcolor: "primary.dark",
                     boxShadow: "none",
                   },
                 }}
               >
-                Book Session
+                {t("nav.bookSession")}
               </Button>
+
+              {/* Mobile Menu Icon */}
+              <IconButton
+                sx={{
+                  display: { xs: "flex", md: "none" },
+                  color: "primary.main",
+                  p: 0.5,
+                }}
+                onClick={() => toggleDrawer(true)}
+              >
+                <MenuIcon fontSize="medium" />
+              </IconButton>
             </Box>
-
-            {/* Mobile */}
-
-            <IconButton
-              sx={{
-                display: {
-                  xs: "flex",
-                  md: "none",
-                },
-
-                color: "primary.main",
-              }}
-              onClick={() => toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
           </Toolbar>
         </Container>
       </AppBar>
 
-      {/* Drawer */}
-
+      {/* Mobile Drawer */}
       <Drawer
         anchor="left"
         open={openDrawer}
         onClose={() => toggleDrawer(false)}
         PaperProps={{
           sx: {
-            width: 280,
+            width: 270,
             bgcolor: "background.paper",
+            display: "flex",
+            flexDirection: "column",
+            justify: "space-between",
+            pb: 3,
           },
         }}
       >
-        <List sx={{ mt: 3 }}>
-          {pages.map((page) => (
-            <ListItem key={page.title} disablePadding>
+        <Box>
+          <List sx={{ mt: 2 }}>
+            {pages.map((page) => (
+              <ListItem key={page.path} disablePadding>
+                <ListItemButton
+                  component={NavLink}
+                  to={page.path}
+                  onClick={() => toggleDrawer(false)}
+                  sx={{
+                    py: 1.5,
+                    "&.active": {
+                      color: "primary.main",
+                      bgcolor: "secondary.main",
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary={page.title}
+                    primaryTypographyProps={{
+                      color: "text.primary",
+                      fontWeight: 500,
+                    }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+
+            {/* Cart Option in Mobile Menu */}
+            <ListItem disablePadding>
               <ListItemButton
                 component={NavLink}
-                to={page.path}
+                to="/cart"
                 onClick={() => toggleDrawer(false)}
                 sx={{
+                  py: 1.5,
                   "&.active": {
                     color: "primary.main",
                     bgcolor: "secondary.main",
                   },
                 }}
               >
+                <Badge badgeContent={getTotalItems()} color="error" sx={{ mr: 2 }}>
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
                 <ListItemText
-                  primary={page.title}
+                  primary={t("nav.cart")}
                   primaryTypographyProps={{
                     color: "text.primary",
                     fontWeight: 500,
@@ -245,62 +291,29 @@ export default function Navbar() {
                 />
               </ListItemButton>
             </ListItem>
-          ))}
+          </List>
+        </Box>
 
-          {/* Cart */}
-
-          <ListItem disablePadding>
-            <ListItemButton
-              component={NavLink}
-              to="/cart"
-              onClick={() => toggleDrawer(false)}
-              sx={{
-                "&.active": {
-                  color: "primary.main",
-                  bgcolor: "secondary.main",
-                },
-              }}
-            >
-              <Badge badgeContent={getTotalItems()} color="error" sx={{ mr: 2 }}>
-                <ShoppingCartOutlinedIcon />
-              </Badge>
-             
-
-              <ListItemText
-                primary="Cart"
-                primaryTypographyProps={{
-                  color: "text.primary",
-                  fontWeight: 500,
-                }}
-              />
-            </ListItemButton>
-          </ListItem>
-
-          <Box
+        <Box sx={{ px: 2 }}>
+          <Button
+            fullWidth
+            variant="contained"
+            component={NavLink}
+            to="/sessions"
+            onClick={() => toggleDrawer(false)}
             sx={{
-              px: 2,
-              mt: 3,
+              bgcolor: "primary.main",
+              borderRadius: 3,
+              py: 1.3,
+              boxShadow: "none",
+              "&:hover": {
+                bgcolor: "primary.dark",
+              },
             }}
           >
-            <Button
-              fullWidth
-              variant="contained"
-              component={NavLink}
-              to="/sessions"
-              sx={{
-                bgcolor: "primary.main",
-                borderRadius: 3,
-                py: 1.3,
-
-                "&:hover": {
-                  bgcolor: "primary.dark",
-                },
-              }}
-            >
-              Book Session
-            </Button>
-          </Box>
-        </List>
+            {t("nav.bookSession")}
+          </Button>
+        </Box>
       </Drawer>
     </>
   );

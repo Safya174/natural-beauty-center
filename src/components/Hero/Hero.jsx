@@ -15,22 +15,19 @@ export default function Hero() {
         minHeight: "100vh",
       }}
     >
-      
-
       <Container
         maxWidth="xl"
         sx={{
-          pt: 8,
+          pt: { xs: 4, md: 8 },
+          // 🟢 بدال ما نحدد left/right، بنستخدم px مع زيادة بسيطة للأمان في العربي
           px: {
-            xs: 2,
-            sm: 3,
-            md: 5,
-            lg: 5,
+            xs: 2.5,
+            sm: 4,
+            md: 6,
           },
         }}
       >
         <HeroContent />
-         
       </Container>
     </Box>
   );

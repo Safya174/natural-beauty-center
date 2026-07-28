@@ -1,27 +1,27 @@
 export const categories = [
   {
     id: 1,
-    name: "All",
+    nameKey: "productsSection.categories.all",
     value: "all",
   },
   {
     id: 2,
-    name: "Hair Care",
+    nameKey: "productsSection.categories.hairCare",
     value: "Hair Care",
   },
   {
     id: 3,
-    name: "Body Care",
+    nameKey: "productsSection.categories.bodyCare",
     value: "Body Care",
   },
   {
     id: 4,
-    name: "Natural Oils",
+    nameKey: "productsSection.categories.naturalOils",
     value: "Natural Oils",
   },
   {
     id: 5,
-    name: "Herbal Products",
+    nameKey: "productsSection.categories.herbalProducts",
     value: "Herbal Products",
   },
 ];

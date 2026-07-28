@@ -50,8 +50,12 @@
   }
 }
 
-body {
+/*body {
+  font-family: 'Cairo', sans-serif !important;
   margin: 0;
+}*/
+* {
+  font-family: 'Alexandria', sans-serif !important;
 }
 
 #root {

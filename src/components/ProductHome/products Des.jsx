@@ -3,104 +3,91 @@ import sulfateFreeShampoo from "../../assets/pro1.WebP";
 import antimonyOil from "../../assets/pro2.WebP";
 import stylingCream from "../../assets/pro4.WebP";
 import naturalHerbalHairBalm from "../../assets/pro5.WebP";
-import spirulinaCapsules from "../../assets/pro6.WebP"
-import indianCostusCapsules from "../../assets/pro7.WebP"
-import nessFatCream from "../../assets/pro8.WebP"
+import spirulinaCapsules from "../../assets/pro6.WebP";
+import indianCostusCapsules from "../../assets/pro7.WebP";
+import nessFatCream from "../../assets/pro8.WebP";
+
 const products = [
   {
     id: 1,
-    name: "Horsetail Herbal Spray",
+    nameKey: "productsSection.items.horsetailSpray.title",
     image: horsetailSpray,
-    category: "Hair Care",
-    badge: "Best Seller",
+    categoryKey: "productsSection.categories.hairCare",
+    badgeKey: "productsSection.badges.bestSeller",
     price: 160,
     oldPrice: 195,
-    description:
-      "Natural herbal spray made with horsetail extract for everyday hair care.",
+    descriptionKey: "productsSection.items.horsetailSpray.description",
   },
-
   {
     id: 2,
-    name: "Natural Sulfate-Free Shampoo",
+    nameKey: "productsSection.items.sulfateFreeShampoo.title",
     image: sulfateFreeShampoo,
-    category: "Hair Care",
-    badge: "Natural",
+    categoryKey: "productsSection.categories.hairCare",
+    badgeKey: "productsSection.badges.natural",
     price: 225,
     oldPrice: 270,
-    description:
-      "Gentle herbal shampoo with botanical ingredients for a refreshing cleanse.",
+    descriptionKey: "productsSection.items.sulfateFreeShampoo.description",
   },
-
   {
     id: 3,
-    name: "Antimony Herbal Oil",
+    nameKey: "productsSection.items.antimonyOil.title",
     image: antimonyOil,
-    category: "Natural Oils",
-    badge: "Herbal",
+    categoryKey: "productsSection.categories.naturalOils",
+    badgeKey: "productsSection.badges.herbal",
     price: 350,
     oldPrice: 450,
-    description:
-      "Traditional herbal oil prepared from carefully selected natural ingredients.",
+    descriptionKey: "productsSection.items.antimonyOil.description",
   },
-
   {
     id: 4,
-    name: "Natural Hair Styling Cream",
+    nameKey: "productsSection.items.stylingCream.title",
     image: stylingCream,
-    category: "Hair Care",
-    badge: "Premium",
+    categoryKey: "productsSection.categories.hairCare",
+    badgeKey: "productsSection.badges.premium",
     price: 195,
     oldPrice: 235,
-    description:
-      "Lightweight styling cream enriched with natural oils for everyday use.",
+    descriptionKey: "productsSection.items.stylingCream.description",
   },
-
   {
     id: 5,
-    name: "Natural Herbal Hair Balm",
+    nameKey: "productsSection.items.hairBalm.title",
     image: naturalHerbalHairBalm,
-    category: "Hair Care",
-    badge: "Natural",
+    categoryKey: "productsSection.categories.hairCare",
+    badgeKey: "productsSection.badges.natural",
     price: 200,
     oldPrice: 250,
-    description:
-      "Herbal balm crafted with botanical ingredients for daily hair care.",
+    descriptionKey: "productsSection.items.hairBalm.description",
   },
-
   {
     id: 6,
-    name: "Organic Spirulina",
+    nameKey: "productsSection.items.spirulina.title",
     image: spirulinaCapsules,
-    category: "Herbal Products",
-    badge: "Organic",
+    categoryKey: "productsSection.categories.herbalProducts",
+    badgeKey: "productsSection.badges.organic",
     price: 350,
     oldPrice: 420,
-    description:
-      "Premium organic spirulina carefully selected as part of our natural collection.",
+    descriptionKey: "productsSection.items.spirulina.description",
   },
-
   {
     id: 7,
-    name: "Indian Costus",
+    nameKey: "productsSection.items.indianCostus.title",
     image: indianCostusCapsules,
-    category: "Herbal Products",
-    badge: "Natural",
+    categoryKey: "productsSection.categories.herbalProducts",
+    badgeKey: "productsSection.badges.natural",
     price: 350,
     oldPrice: 420,
-    description:
-      "High-quality Indian Costus prepared with care from trusted natural sources.",
+    descriptionKey: "productsSection.items.indianCostus.description",
   },
-
   {
     id: 8,
-    name: "Natural Herbal Cream",
+    nameKey: "productsSection.items.herbalCream.title",
     image: nessFatCream,
-    category: "Body Care",
-    badge: "Best Seller",
+    categoryKey: "productsSection.categories.bodyCare",
+    badgeKey: "productsSection.badges.bestSeller",
     price: 420,
     oldPrice: 480,
-    description:
-      "Herbal body cream enriched with botanical ingredients for daily skin care.",
+    descriptionKey: "productsSection.items.herbalCream.description",
   },
 ];
+
 export default products;

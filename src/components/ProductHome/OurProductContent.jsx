@@ -1,6 +1,8 @@
 import { Box, Typography } from "@mui/material";
-
+import { useTranslation } from "react-i18next";
 export default function ProductContent() {
+  const { t,i18n } = useTranslation();
+  let isArabic = i18n.language == "ar";
   return (
     <Box
       sx={{
@@ -15,12 +17,12 @@ export default function ProductContent() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: 2,
+          letterSpacing: isArabic ? "normal" : 2,
           color: "primary.main",
           fontWeight: 600,
         }}
       >
-        OUR NATURAL COLLECTION
+       {t("productsSection.subtitle")}
       </Typography>
 
       <Typography
@@ -32,7 +34,7 @@ export default function ProductContent() {
           color: "text.primary",
         }}
       >
-        Pure Herbs & Natural Essentials
+         {t("productsSection.title")}
       </Typography>
 
       <Typography
@@ -45,9 +47,7 @@ export default function ProductContent() {
           mx: "auto",
         }}
       >
-        Explore our carefully selected collection of herbs, botanical oils, and
-        natural products inspired by traditional wellness and everyday
-        self-care.
+       {t("productsSection.description")}
       </Typography>
     </Box>
   );

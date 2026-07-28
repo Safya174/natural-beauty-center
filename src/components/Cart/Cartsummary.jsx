@@ -9,10 +9,17 @@ import { secondaryButton, primaryButton } from "../../Theme/buttonStyles";
 import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 export default function CartSummary() {
   let { getTotalPrice, getTotalItems, sendOrderToWhatsApp } =
     useContext(CartContext);
+    const { t,i18n } = useTranslation();
+      const isArabic = i18n.language === "ar";
+     const formatPrice = (price) => {
+    if (price === undefined || price === null) return "";
+    return new Intl.NumberFormat(isArabic ? "ar-EG" : "en-US").format(price);
+  };
+
   return (
     <Box
       sx={{
@@ -30,6 +37,7 @@ export default function CartSummary() {
         },
       }}
     >
+      
       {/* Title */}
       <Typography
         variant="h4"
@@ -40,7 +48,7 @@ export default function CartSummary() {
           textAlign: "center",
         }}
       >
-        Order Summary
+        {t("cart.orderSummary")}
       </Typography>
 
       <Divider sx={{ my: 3 }} />
@@ -53,10 +61,10 @@ export default function CartSummary() {
           mb: 2,
         }}
       >
-        <Typography color="text.secondary">Number of Products</Typography>
+        <Typography color="text.secondary">{t("cart.numberOfProducts")}</Typography>
 
         <Typography fontWeight={600} color="text.primary">
-          {getTotalItems()}
+          {formatPrice(getTotalItems())} 
         </Typography>
       </Box>
 
@@ -68,10 +76,10 @@ export default function CartSummary() {
           mb: 2,
         }}
       >
-        <Typography color="text.secondary">Delivery</Typography>
+        <Typography color="text.secondary">{t("cart.delivery")}</Typography>
 
         <Typography fontWeight={600} color="text.primary">
-          To be confirmed
+           {t("cart.toBeConfirmed")}
         </Typography>
       </Box>
 
@@ -87,11 +95,11 @@ export default function CartSummary() {
         }}
       >
         <Typography variant="h5" fontWeight={700} color="text.primary">
-          Total
+           {t("cart.total")}
         </Typography>
 
         <Typography variant="h4" fontWeight={700} color="primary.main">
-          {getTotalPrice()}
+           {formatPrice(getTotalPrice())} 
         </Typography>
       </Box>
 
@@ -121,8 +129,7 @@ export default function CartSummary() {
             lineHeight: 1.8,
           }}
         >
-          Your order will be reviewed and confirmed through WhatsApp before
-          delivery.
+         {t("cart.note")}
         </Typography>
       </Box>
 
@@ -134,10 +141,12 @@ export default function CartSummary() {
         sx={{
           ...primaryButton,
           mb: 2,
+          
+           gap: 1.5
         }}
         onClick={sendOrderToWhatsApp}
       >
-        Send Order via WhatsApp
+        {t("cart.sendWhatsApp")}
       </Button>
 
       <Button
@@ -146,9 +155,9 @@ export default function CartSummary() {
         component={NavLink}
         to="/products"
         startIcon={<ShoppingBagOutlinedIcon />}
-        sx={secondaryButton}
+        sx={{...secondaryButton, gap: 1.5}}
       >
-        Continue Shopping
+        {t("cart.continueShopping")}
       </Button>
     </Box>
   );

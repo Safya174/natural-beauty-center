@@ -2,7 +2,10 @@ import logo from "../../assets/photo_2026-07-01_19-34-12.jpg";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
+import { useTranslation } from "react-i18next";
 export default function FooterBrand() {
+  const { t,i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   return (
     <Box
       sx={{
@@ -41,12 +44,12 @@ export default function FooterBrand() {
           fontSize: ".95rem",
           maxWidth: 520,
           textAlign: "center",
-          lineHeight:1.8,
+          lineHeight: isArabic ? 3 : 1.8,
           mt:0
         }}
         variant="body1"
       >
-        Discover the power of nature with premium botanical care for healthy, radiant skin and hair.
+        {t("footer.description")}
       </Typography>
     </Box>
   );

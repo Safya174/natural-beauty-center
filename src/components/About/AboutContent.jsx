@@ -2,69 +2,70 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { primaryButton } from "../../Theme/buttonStyles";
 import Button from "@mui/material/Button";
-import spacing from "../../theme/spacing";
+import { useTranslation } from "react-i18next";
 
 export default function AboutContent() {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+
   return (
     <Box
       component="section"
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: spacing.hero.contentGap,   
+        gap: 2.5, // 🟢 مسافة ثابتة ومريحة جداً بين كل العناصر بدون لخبطة
         alignItems: "flex-start",
       }}
     >
+      {/* اسم السكشن العلوي */}
       <Typography
         variant="overline"
         sx={{
-          fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: 2,
+          letterSpacing: isArabic ? "normal" : "3px",
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
         }}
       >
-        About
+        {t("About.SectionName")}
       </Typography>
+
+      {/* العنوان الرئيسي */}
       <Typography
         variant="h2"
         color="text.primary"
         sx={{
-          fontFamily: "Alexandria",
           fontWeight: 700,
-          color: "text.primary",
+          lineHeight: isArabic ? 1.35 : 1.2, // 🟢 ضبط ارتفاع السطر للعنوان ليكون ناعم ومريح
         }}
       >
-        Natural Beauty Begins with Genuine Care
+        {t("About.title")}
       </Typography>
+
+      {/* الوصف */}
       <Typography
         variant="body1"
         color="text.secondary"
         sx={{
           maxWidth: "42rem",
-          mt: 0,
-          fontFamily: "Alexandria",
           fontWeight: 400,
-          lineHeight: 1.9,
+          lineHeight: isArabic ? 1.9 : 1.7, 
         }}
       >
-        At Natural Beauty Center, we combine the power of nature with modern
-        beauty expertise to create a personalized wellness experience. Using
-        carefully selected natural ingredients and tailored treatment plans, we
-        help every client achieve healthier hair, radiant skin, and lasting
-        confidence.
+        {t("About.description")}
       </Typography>
+
+      {/* الزرار */}
       <Button
         variant="outlined"
         sx={{
           ...primaryButton,
-          mt:2
          
         }}
       >
-        Discover Our Story
+        {t("About.Discoveryourstory")}
       </Button>
     </Box>
   );

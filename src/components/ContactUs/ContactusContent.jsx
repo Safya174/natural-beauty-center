@@ -1,8 +1,11 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import spacing from "../../theme/spacing";
-
+import { useTranslation } from "react-i18next";
 export default function ContactUSContent() {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+
   return (
     <Box
       component="section"
@@ -19,13 +22,13 @@ export default function ContactUSContent() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: 2,
+          letterSpacing: isArabic? "normal" : 2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
         }}
       >
-        Contact us
+        {t("contact.subtitle")}
       </Typography>
       <Typography
         variant="h2"
@@ -36,7 +39,7 @@ export default function ContactUSContent() {
           color: "text.primary",
         }}
       >
-        We're Always Here to Help
+        {t("contact.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -49,9 +52,7 @@ export default function ContactUSContent() {
           lineHeight: 1.9,
         }}
       >
-        We’re always happy to hear from you. Whether you have a question, would
-        like to book a session, or need personalized guidance, our team is here
-        to assist you with complete privacy and professionalism.
+        {t("contact.description")}
       </Typography>
     </Box>
   );

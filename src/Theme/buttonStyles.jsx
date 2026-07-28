@@ -1,6 +1,7 @@
 export const primaryButton = {
   px: 4,
   py: 1.5,
+  
   borderRadius: "999px",
   bgcolor: "primary.main",
   color: "#fff",

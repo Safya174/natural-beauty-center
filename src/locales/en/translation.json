@@ -1,0 +1,168 @@
+{
+  "brand": {
+    "name": "Natural Beauty Center"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "sessions": "Sessions",
+    "products": "Products",
+    "contact": "Contact",
+    "cart": "Cart",
+    "bookSession": "Book Session"
+  },
+  "hero": {
+    "brandName": "Natural Beauty Center",
+    "title": "Your True Beauty Begins with Nature",
+    "description": "Where timeless natural care meets modern expertise, offering personalized experiences that help restore balance, confidence, and healthy beauty.",
+    "exploreProducts": "Explore Products",
+    "bookSession": "Book Session"
+  },
+  "About": {
+    "SectionName": "About Us",
+    "title": "Natural Beauty Begins with Genuine Care",
+    "description": "At Natural Beauty Center, we combine the power of nature with modern beauty expertise to create a personalized wellness experience. Using carefully selected natural ingredients and tailored treatment plans, we help every client achieve healthier hair, radiant skin, and lasting confidence.",
+    "Discoveryourstory": "Discovery Our Story"
+  },
+  "whyUs": {
+    "subtitle": "Our distinction lies in the details",
+    "title": "Why Choose Natural Beauty Center?",
+    "description": "We combine the power of nature with years of expertise to deliver personalized beauty solutions that help you look and feel your best.",
+    "features": {
+      "naturalProducts": {
+        "title": "Natural Products",
+        "description": "Crafted from carefully selected botanical ingredients for everyday care."
+      },
+      "organicIngredients": {
+        "title": "Organic Ingredients",
+        "description": "Gentle formulas made with high-quality natural and organic extracts."
+      },
+      "trustedExperience": {
+        "title": "Trusted Experience",
+        "description": "Years of expertise dedicated to providing premium natural beauty solutions."
+      },
+      "personalizedCare": {
+        "title": "Personalized Care",
+        "description": "Every recommendation is tailored to your unique beauty and wellness goals."
+      }
+    }
+  },
+  "productsSection": {
+    "subtitle": "OUR NATURAL COLLECTION",
+    "title": "Pure Herbs & Natural Essentials",
+    "description": "Explore our carefully selected collection of herbs, botanical oils, and natural extracts inspired by traditional wellness and everyday self-care.",
+    "currency": "EGP",
+    "addToCart": "Add To Cart",
+    "categories": {
+      "all": "All",
+      "hairCare": "Hair Care",
+      "bodyCare": "Body Care",
+      "naturalOils": "Natural Oils",
+      "herbalProducts": "Herbal Extracts"
+    },
+    "badges": {
+      "bestSeller": "Best Seller",
+      "natural": "Natural",
+      "herbal": "Herbal",
+      "premium": "Premium",
+      "organic": "Organic"
+    },
+    "items": {
+      "horsetailSpray": {
+        "title": "Horsetail Herbal Spray",
+        "description": "Natural herbal spray made with horsetail extract for everyday hair care."
+      },
+      "sulfateFreeShampoo": {
+        "title": "Natural Sulfate-Free Shampoo",
+        "description": "Gentle herbal shampoo with botanical ingredients for a refreshing cleanse."
+      },
+      "antimonyOil": {
+        "title": "Antimony Herbal Oil",
+        "description": "Traditional herbal oil prepared from carefully selected natural ingredients."
+      },
+      "stylingCream": {
+        "title": "Natural Hair Styling Cream",
+        "description": "Lightweight styling cream enriched with natural oils for everyday use."
+      },
+      "hairBalm": {
+        "title": "Natural Herbal Hair Balm",
+        "description": "Herbal balm crafted with botanical ingredients for daily hair care."
+      },
+      "spirulina": {
+        "title": "Organic Spirulina",
+        "description": "Premium organic spirulina carefully selected as part of our natural collection."
+      },
+      "indianCostus": {
+        "title": "Indian Costus",
+        "description": "High-quality Indian Costus prepared with care from trusted natural sources."
+      },
+      "herbalCream": {
+        "title": "Natural Herbal Body Cream",
+        "description": "Herbal body cream enriched with botanical ingredients for daily skin care."
+      }
+    }
+  },
+  "testimonials": {
+    "subtitle": "TESTIMONIALS",
+    "title": "What Our Clients Say",
+    "description": "Real experiences from clients who trusted Natural Beauty Center."
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "description": "Take a moment to review your selected natural products before placing your order through WhatsApp.",
+    "orderSummary": "Order Summary",
+    "numberOfProducts": "Number of Products",
+    "delivery": "Delivery",
+    "toBeConfirmed": "To be confirmed",
+    "total": "Total",
+    "note": "Your order will be reviewed and confirmed through WhatsApp before delivery.",
+    "sendWhatsApp": "Send Order via WhatsApp",
+    "continueShopping": "Continue Shopping"
+  },
+  "contact": {
+    "subtitle": "CONTACT US",
+    "title": "We're Always Here to Help",
+    "description": "We're always happy to hear from you. Whether you have a question, would like to book a session, or need personalized guidance, our team is here to assist you with complete privacy and professionalism.",
+    "location": {
+      "subtitle": "VISIT OUR CENTER",
+      "title": "Find Us in El Nozha, Cairo"
+    },
+    "info": {
+      "workingHoursTitle": "Opening Hours",
+      "workingHoursValue": "9:00 AM - 6:00 PM",
+      "addressTitle": "Address",
+      "addressValue": "12 Ali Fahmy Kamel El Nozha, Cairo",
+      "emailTitle": "Email",
+      "emailValue": "naturalbeautycenter@gmail.com",
+      "whatsappTitle": "WhatsApp",
+      "whatsappValue": "+20 103 343 8385"
+    },
+    "booking": {
+      "subtitle": "READY TO BOOK?",
+      "title": "Let's Begin Your Natural Beauty Journey",
+      "description": "Book your appointment directly through WhatsApp. Our specialists are ready to answer your questions and help you choose the perfect treatment for your needs.",
+      "whatsappBtn": "Chat on WhatsApp"
+    }
+  },
+  "footer": {
+    "brandName": "Natural Beauty Center",
+    "description": "Discover the power of nature with premium botanical care for healthy, radiant skin and hair.",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "sessions": "Sessions",
+      "products": "Products",
+      "contact": "Contact"
+    },
+    "buttons": {
+      "bookSession": "Book Session",
+      "followFacebook": "Follow us on Facebook"
+    },
+    "rights": "All rights reserved © Natural Beauty Center"
+  },
+  "AboutHero":{
+  "about_us": "ABOUT US",
+  "main_heading": "True Beauty Begins with Nature",
+  "description": "We don't believe in temporary beauty. We believe in healthy beauty that starts from within, using carefully selected organic extracts and cold-pressed oils—free from harsh chemicals."
+}
+}
