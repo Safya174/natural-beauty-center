@@ -13,9 +13,9 @@ import { useTranslation } from "react-i18next";
 export default function CartSummary() {
   let { getTotalPrice, getTotalItems, sendOrderToWhatsApp } =
     useContext(CartContext);
-    const { t,i18n } = useTranslation();
-      const isArabic = i18n.language === "ar";
-     const formatPrice = (price) => {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+  const formatPrice = (price) => {
     if (price === undefined || price === null) return "";
     return new Intl.NumberFormat(isArabic ? "ar-EG" : "en-US").format(price);
   };
@@ -37,7 +37,6 @@ export default function CartSummary() {
         },
       }}
     >
-      
       {/* Title */}
       <Typography
         variant="h4"
@@ -61,10 +60,12 @@ export default function CartSummary() {
           mb: 2,
         }}
       >
-        <Typography color="text.secondary">{t("cart.numberOfProducts")}</Typography>
+        <Typography color="text.secondary">
+          {t("cart.numberOfProducts")}
+        </Typography>
 
         <Typography fontWeight={600} color="text.primary">
-          {formatPrice(getTotalItems())} 
+          {formatPrice(getTotalItems())}
         </Typography>
       </Box>
 
@@ -79,7 +80,7 @@ export default function CartSummary() {
         <Typography color="text.secondary">{t("cart.delivery")}</Typography>
 
         <Typography fontWeight={600} color="text.primary">
-           {t("cart.toBeConfirmed")}
+          {t("cart.toBeConfirmed")}
         </Typography>
       </Box>
 
@@ -95,11 +96,11 @@ export default function CartSummary() {
         }}
       >
         <Typography variant="h5" fontWeight={700} color="text.primary">
-           {t("cart.total")}
+          {t("cart.total")}
         </Typography>
 
         <Typography variant="h4" fontWeight={700} color="primary.main">
-           {formatPrice(getTotalPrice())} 
+          {formatPrice(getTotalPrice())}
         </Typography>
       </Box>
 
@@ -129,20 +130,24 @@ export default function CartSummary() {
             lineHeight: 1.8,
           }}
         >
-         {t("cart.note")}
+          {t("cart.note")}
         </Typography>
       </Box>
 
       {/* Buttons */}
       <Button
+        component="a"
+        herf={sendOrderToWhatsApp(isArabic)}
+        target="_blank"
+        rel="noopener noreferrer"
         variant="contained"
         fullWidth
         startIcon={<WhatsAppIcon />}
         sx={{
           ...primaryButton,
           mb: 2,
-          
-           gap: 1.5
+
+          gap: 1.5,
         }}
         onClick={sendOrderToWhatsApp}
       >
@@ -155,7 +160,7 @@ export default function CartSummary() {
         component={NavLink}
         to="/products"
         startIcon={<ShoppingBagOutlinedIcon />}
-        sx={{...secondaryButton, gap: 1.5}}
+        sx={{ ...secondaryButton, gap: 1.5 }}
       >
         {t("cart.continueShopping")}
       </Button>

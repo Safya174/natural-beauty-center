@@ -3,40 +3,46 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
 export default function QuantityControl({
- quantity,
+  quantity,
   onIncrease,
   onDecrease,
 }) {
-  
   return (
     <Box
       sx={{
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-between",
         border: "1px solid",
         borderColor: "divider",
-        borderRadius: 3,
+        borderRadius: "30px", // جعل الحواف دائرية أكثر لشكل أجمل
         overflow: "hidden",
-        width: "fit-content",
+        width: "fit-content", // هذا هو السطر الأهم! يمنعه من التمدد بشكل مفرط
+        minWidth: 110, // عرض أدنى لضمان ظهور الأزرار والرقم بوضوح
+        px: 0.5,
+        py: 0.25,
+        backgroundColor: "background.paper", // خلفية بيضاء لتمييزه
       }}
     >
-      <IconButton onClick={onDecrease}>
-        <RemoveIcon />
+      <IconButton size="small" onClick={onDecrease}>
+        <RemoveIcon fontSize="small" />
       </IconButton>
-  
+
       <Typography
         sx={{
-          minWidth: 40,
+          px: 1,
           textAlign: "center",
           fontWeight: 600,
           fontFamily: "Alexandria",
+          userSelect: "none",
+          minWidth: 40, 
         }}
       >
         {quantity}
       </Typography>
 
-      <IconButton onClick={onIncrease}>
-        <AddIcon />
+      <IconButton size="small" onClick={onIncrease}>
+        <AddIcon fontSize="small" />
       </IconButton>
     </Box>
   );

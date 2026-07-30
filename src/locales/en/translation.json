@@ -69,36 +69,60 @@
     },
     "items": {
       "horsetailSpray": {
-        "title": "Horsetail Herbal Spray",
-        "description": "Natural herbal spray made with horsetail extract for everyday hair care."
+        "title": "Horsetail Spray",
+        "description": "Herbal water-based spray enriched with natural extracts for daily hair care.",
+        "fullDescription": "Horsetail Spray is a unique water-based extract enriched with powerful natural herbs that nourish hair from roots to tips, helping to maintain a healthy look and full appearance.",
+        "howToUse": "Spray directly onto hair and scalp, massage gently. Use daily for best results.",
+        "volume": "150 ml"
       },
       "sulfateFreeShampoo": {
         "title": "Natural Sulfate-Free Shampoo",
-        "description": "Gentle herbal shampoo with botanical ingredients for a refreshing cleanse."
+        "description": "Gentle herbal shampoo that cleanses without stripping natural oils.",
+        "fullDescription": "An innovative shampoo completely free from sulfates, parabens, and silicones. Gently cleanses the scalp without causing dryness, leaving your hair looking healthy and naturally vibrant.",
+        "howToUse": "Apply an appropriate amount to wet hair, gently massage the scalp into a light lather, then rinse thoroughly with water.",
+        "volume": "220 ml"
       },
       "antimonyOil": {
-        "title": "Antimony Herbal Oil",
-        "description": "Traditional herbal oil prepared from carefully selected natural ingredients."
+        "title": "Natural Antimony Oil",
+        "description": "Rich oil formula designed to nourish the scalp and enhance hair thickness.",
+        "fullDescription": "A unique blend of Antimony Oil and Amla Oil that penetrates the scalp to nourish roots, support a fuller look, enhance hair density, and protect split ends.",
+        "howToUse": "Apply a few drops directly to the scalp and massage gently for 5 minutes. Leave on for a few hours before washing.",
+        "volume": "100 ml"
       },
       "stylingCream": {
         "title": "Natural Hair Styling Cream",
-        "description": "Lightweight styling cream enriched with natural oils for everyday use."
+        "description": "Nourishing cream with shea butter and natural oils for styling and hydration.",
+        "fullDescription": "A styling cream enriched with a blend of Shea Butter, Coconut Oil, Argan Oil, Silk Protein, and Panthenol B5. Provides deep hydration and easy styling while leaving hair with a natural shine and healthy look without weighing it down.",
+        "howToUse": "Apply a suitable amount onto hands and distribute evenly through damp or dry hair from mid-lengths to ends, then style as desired.",
+        "volume": "100 ml"
       },
       "hairBalm": {
-        "title": "Natural Herbal Hair Balm",
-        "description": "Herbal balm crafted with botanical ingredients for daily hair care."
+        "title": "Natural Herbal & Shea Butter Hair Balm",
+        "description": "Deeply nourishing balm that leaves hair silky and tangle-free.",
+        "fullDescription": "A rich nourishing formula made with natural herbal extracts, pure Aloe Vera, organic Shea Butter, Silk Protein, and Argan Oil. Coats the hair shaft to provide intense hydration, protecting it from dryness while adding visible softness and shine.",
+        "howToUse": "Apply to hair lengths and ends after shampooing, leave for 2-3 minutes, then rinse thoroughly with water.",
+        "volume": "200 ml"
       },
       "spirulina": {
-        "title": "Organic Spirulina",
-        "description": "Premium organic spirulina carefully selected as part of our natural collection."
+        "title": "Natural Spirulina Capsules",
+        "description": "Natural dietary supplement rich in proteins and vitamins for daily vitality.",
+        "fullDescription": "Capsules containing blue-green Spirulina algae, a superfood rich in plant proteins, antioxidants, minerals, and vitamins. Helps boost daily energy levels and supports a balanced healthy lifestyle.",
+        "howToUse": "Take 2 capsules daily with meals or as advised by a nutritionist, with plenty of water.",
+        "volume": "60 Capsules"
       },
       "indianCostus": {
-        "title": "Indian Costus",
-        "description": "High-quality Indian Costus prepared with care from trusted natural sources."
+        "title": "Indian Costus Capsules",
+        "description": "Pure herbal capsules to support general wellness and natural balance.",
+        "fullDescription": "Premium capsules containing 100% pure natural Indian Costus. A traditional herbal supplement known for supporting overall wellness, natural body balance, and overall vitality.",
+        "howToUse": "Take 1 to 2 capsules daily after meals with a glass of water.",
+        "volume": "60 Capsules"
       },
       "herbalCream": {
-        "title": "Natural Herbal Body Cream",
-        "description": "Herbal body cream enriched with botanical ingredients for daily skin care."
+        "title": "Camel Hump Herbal Massage Cream",
+        "description": "Topical massage cream to smooth, firm, and improve skin appearance.",
+        "fullDescription": "A rich massage formula blending natural camel hump fat with aromatic herbal extracts. Deeply moisturizes the outer skin layers and, with regular massage, helps enhance skin elasticity, firm appearance, and leave a soft texture.",
+        "howToUse": "Apply a suitable amount to the desired area and massage in circular motions for 10 minutes until fully absorbed. Best used daily.",
+        "volume": "150 g"
       }
     }
   },
@@ -286,8 +310,8 @@
     }
   },
   "SessionsContent": {
-  "tag": "Exclusive Experiences",
-  "title": "Our Featured Sessions",
-  "subtitle": "Discover our premium natural treatments designed to restore beauty, wellness, and confidence."
-}
+    "tag": "Exclusive Experiences",
+    "title": "Our Featured Sessions",
+    "subtitle": "Discover our premium natural treatments designed to restore beauty, wellness, and confidence."
+  }
 }

@@ -27,7 +27,7 @@ export default function AboutHeroContent() {
           fontSize: ".95rem",
           fontWeight: 700,
           letterSpacing: isArabic ? "normal" : ".35em",
-          color: isArabic ? "#3E6B39" : "primary.main",
+          color:  "#3E6B39" ,
           mt: 2,
         }}
       >
@@ -58,7 +58,7 @@ export default function AboutHeroContent() {
           mt: 0,
           lineHeight: 1.8,
           
-          color: isArabic ? "#3A4D39" : "text.secondary",
+          color: "#3A4D39",
           fontWeight: isArabic ? 500 : 400, 
         }}
       >

@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
@@ -17,7 +16,7 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("app_cart", JSON.stringify(cart));
   }, [cart]);
-  function addToCart(product) {
+  function addToCart(product,quantity=1) {
     let existingProduct = cart.find((item) => item.id == product.id);
     if (existingProduct) {
       let updatedCart = cart.map((item) => {
@@ -29,7 +28,7 @@ export const CartProvider = ({ children }) => {
       });
       setCart(updatedCart);
     } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
+      setCart([...cart, { ...product, quantity: quantity }]);
     }
   }
   function updateQuantity(productId, amount) {
@@ -53,28 +52,47 @@ export const CartProvider = ({ children }) => {
   function getTotalItems() {
     return cart.reduce((total, item) => total + item.quantity, 0);
   }
-  function sendOrderToWhatsApp() {
+  function sendOrderToWhatsApp({ lang }) {
     let phone = "201033438385";
 
     let itemtext = cart
-      .map(
-        (item, index) =>
-          `*${index + 1}. ${item.name}*\n   - العدد: ${item.quantity}\n   - السعر: ${item.price * item.quantity} ج.م`,
-      )
+      .map((item, index) => {
+        if (lang) {
+          return `*${index + 1}. ${item.name}*\n   - العدد: ${item.quantity}\n   - السعر: ${item.price * item.quantity} ج.م`;
+        } else {
+          return `*${index + 1}. ${item.name}*\n   - Qty:${item.quantity}\n   - Price: ${item.price * item.quantity} EGP`;
+        }
+      })
       .join("\n\n");
 
-    const fullMessage =
-      `*طلب جديد من الموقع*\n` +
-      `=========================\n\n` +
-      `*تفاصيل المنتجات:*\n\n` +
-      `${itemtext}\n\n` +
-      `=========================\n` +
-      `*الإجمالي الكلي:* *${getTotalPrice()} ج.م*\n` +
-      `=========================\n\n` +
-      `برجاء تأكيد الطلب والتوصيل.`;
+    const fullMessage = lang
+      ? `*طلب جديد من الموقع*\n` +
+        `=========================\n\n` +
+        `*تفاصيل المنتجات:*\n\n` +
+        `${itemtext}\n\n` +
+        `=========================\n` +
+        `*الإجمالي الكلي:* *${getTotalPrice()} ج.م*\n` +
+        `=========================\n\n` +
+        `برجاء تأكيد الطلب والتوصيل.`
+      : `*New Order from Website*\n` +
+        `=========================\n\n` +
+        `*Order Details:*\n\n` +
+        `${itemtext}\n\n` +
+        `=========================\n` +
+        `*Total Price:* *${getTotalPrice()} EGP*\n` +
+        `=========================\n\n` +
+        `Please confirm the order and delivery details.`;
 
     let safeMessage = encodeURIComponent(fullMessage);
-    window.open(`https://wa.me/${phone}?text=${safeMessage}`, "_blank");
+    return `https://wa.me/${phone}?text=${safeMessage}`;
+  }
+  function getSessionBookingLink(SessionName, Language) {
+    const phone = "201033438385";
+    let message =
+      Language == "ar"
+        ? `مرحباً، أود حجز جلسة: *${SessionName}*`
+        : `Hello, I would like to book: *${SessionName}*`;
+    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   }
 
   return (
@@ -87,6 +105,7 @@ export const CartProvider = ({ children }) => {
         getTotalPrice,
         getTotalItems,
         sendOrderToWhatsApp,
+        getSessionBookingLink,
       }}
     >
       {children}

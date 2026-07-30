@@ -17,6 +17,9 @@ const products = [
     price: 160,
     oldPrice: 195,
     descriptionKey: "productsSection.items.horsetailSpray.description",
+    fullDescriptionKey: "productsSection.items.horsetailSpray.fullDescription",
+    howToUseKey: "productsSection.items.horsetailSpray.howToUse",
+    volumeKey: "productsSection.items.horsetailSpray.volume",
   },
   {
     id: 2,
@@ -27,6 +30,9 @@ const products = [
     price: 225,
     oldPrice: 270,
     descriptionKey: "productsSection.items.sulfateFreeShampoo.description",
+    fullDescriptionKey: "productsSection.items.sulfateFreeShampoo.fullDescription",
+    howToUseKey: "productsSection.items.sulfateFreeShampoo.howToUse",
+    volumeKey: "productsSection.items.sulfateFreeShampoo.volume",
   },
   {
     id: 3,
@@ -37,6 +43,9 @@ const products = [
     price: 350,
     oldPrice: 450,
     descriptionKey: "productsSection.items.antimonyOil.description",
+    fullDescriptionKey: "productsSection.items.antimonyOil.fullDescription",
+    howToUseKey: "productsSection.items.antimonyOil.howToUse",
+    volumeKey: "productsSection.items.antimonyOil.volume",
   },
   {
     id: 4,
@@ -47,6 +56,9 @@ const products = [
     price: 195,
     oldPrice: 235,
     descriptionKey: "productsSection.items.stylingCream.description",
+    fullDescriptionKey: "productsSection.items.stylingCream.fullDescription",
+    howToUseKey: "productsSection.items.stylingCream.howToUse",
+    volumeKey: "productsSection.items.stylingCream.volume",
   },
   {
     id: 5,
@@ -57,6 +69,9 @@ const products = [
     price: 200,
     oldPrice: 250,
     descriptionKey: "productsSection.items.hairBalm.description",
+    fullDescriptionKey: "productsSection.items.hairBalm.fullDescription",
+    howToUseKey: "productsSection.items.hairBalm.howToUse",
+    volumeKey: "productsSection.items.hairBalm.volume",
   },
   {
     id: 6,
@@ -67,6 +82,9 @@ const products = [
     price: 350,
     oldPrice: 420,
     descriptionKey: "productsSection.items.spirulina.description",
+    fullDescriptionKey: "productsSection.items.spirulina.fullDescription",
+    howToUseKey: "productsSection.items.spirulina.howToUse",
+    volumeKey: "productsSection.items.spirulina.volume",
   },
   {
     id: 7,
@@ -77,6 +95,9 @@ const products = [
     price: 350,
     oldPrice: 420,
     descriptionKey: "productsSection.items.indianCostus.description",
+    fullDescriptionKey: "productsSection.items.indianCostus.fullDescription",
+    howToUseKey: "productsSection.items.indianCostus.howToUse",
+    volumeKey: "productsSection.items.indianCostus.volume",
   },
   {
     id: 8,
@@ -87,6 +108,9 @@ const products = [
     price: 420,
     oldPrice: 480,
     descriptionKey: "productsSection.items.herbalCream.description",
+    fullDescriptionKey: "productsSection.items.herbalCream.fullDescription",
+    howToUseKey: "productsSection.items.herbalCream.howToUse",
+    volumeKey: "productsSection.items.herbalCream.volume",
   },
 ];
 

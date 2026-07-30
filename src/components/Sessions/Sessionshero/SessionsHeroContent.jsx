@@ -15,7 +15,7 @@ export default function SessionsContent() {
         display: "flex",
         flexDirection: "column",
         gap: spacing.hero.contentGap || 2,
-        maxWidth: { xs: "100%", md: "620px" },
+        maxWidth: { xs: "100%", md: "720px" },
         textAlign: "start",
       }}
     >
@@ -59,7 +59,7 @@ export default function SessionsContent() {
           mt: 0,
           lineHeight: 1.8,
          
-          color: isArabic ? "#3A4D39" : "text.secondary",
+          color:  "#3A4D39" ,
           fontWeight: isArabic ? 500 : 400, 
         }}
       >

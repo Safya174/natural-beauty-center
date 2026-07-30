@@ -9,8 +9,11 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Box, Stack } from "@mui/material";
 import { primaryButton } from "../../../Theme/buttonStyles";
 import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 export default function SessionsCard({ session }) {
   const { t, i18n } = useTranslation();
+  let { getSessionBookingLink } = useContext(CartContext);
   const isArabic = i18n.language === "ar";
   const features = t(session.featuresKey, { returnObjects: true });
   return (
@@ -137,13 +140,16 @@ export default function SessionsCard({ session }) {
         </Stack>
         <Button
           variant="contained"
+          component="a"
+          href={getSessionBookingLink(session.name, isArabic)}
+          target="_blank"
+          rel="noopener noreferrer"
           startIcon={<WhatsAppIcon />}
           sx={{
             ...primaryButton,
             mt: "auto",
             gap: 1,
           }}
-          
         >
           {t(session.buttonKey)}
         </Button>
