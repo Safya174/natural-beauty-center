@@ -8,7 +8,7 @@ export default function Hero() {
     <Box
       component="section"
       sx={{
-        backgroundImage: `url(${BackgroundImg})`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(${BackgroundImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

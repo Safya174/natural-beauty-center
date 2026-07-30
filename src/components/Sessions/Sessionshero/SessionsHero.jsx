@@ -8,13 +8,12 @@ export default function SessionsHero() {
     <Box
       component="section"
       sx={{
-        // 👈 أضفنا التدرج الأسود الشفاف (0.4) قبل رابط الصورة
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${BackgroundImg})`,
+      
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(${BackgroundImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
-      
       }}
     >
       <Container

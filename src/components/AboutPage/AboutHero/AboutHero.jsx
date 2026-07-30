@@ -1,26 +1,22 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import BackgroundImg from "../../../assets/AboutHero.webp";
-import AboutHeroContent from './AboutHeroContent'
-
+import AboutHeroContent from "./AboutHeroContent";
 
 export default function AboutHero() {
   return (
     <Box
       component="section"
       sx={{
-        backgroundImage: `url(${BackgroundImg})`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(${BackgroundImg})`,
         backgroundSize: "cover",
-        backgroundPosition:"center",
-        
+        backgroundPosition: "center",
+
         backgroundRepeat: "no-repeat",
         height: "100vh",
-        
       }}
     >
-    
-
-       <Container
+      <Container
         maxWidth="xl"
         sx={{
           pt: { xs: 4, md: 8 },
@@ -33,7 +29,6 @@ export default function AboutHero() {
         }}
       >
         <AboutHeroContent />
-         
       </Container>
     </Box>
   );
