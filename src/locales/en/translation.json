@@ -190,7 +190,6 @@
     "title": "Inside Natural Beauty Center",
     "description": "Explore our peaceful spaces, discover our fine apothecary treasures, and experience beauty inspired by the purity of nature."
   },
-
   "sessionsHero": {
     "tagline": "Our Services",
     "title": "Natural Sessions Tailored for Your Well-being",
@@ -199,5 +198,96 @@
       "bookSession": "Book a Session",
       "contactWhatsapp": "Contact via WhatsApp"
     }
-  }
+  },
+  "sessions": {
+    "rabbitHair": {
+      "tag": "100% Natural Straightening",
+      "title": "Natural Rabbit Hair",
+      "subtitle": "Chemical-Free Natural Treatment & Straightening",
+      "description": "A comprehensive therapeutic session made from natural herbal extracts and oils, completely free of chemicals and formalin. Safe for kids, pregnant, and breastfeeding women, including a clinical nutrition system and home follow-up.",
+      "features": [
+        "Safe for kids, pregnant, and breastfeeding women",
+        "6-session program over 3 months (one session every two weeks)",
+        "Includes a home care kit (Natural Shampoo, Conditioner, & Rabbit Cream)",
+        "Clinical nutrition plan to address vitamin deficiencies causing hair weakness",
+        "Suitable for all hair types including African and damaged hair"
+      ],
+      "bookBtn": "Book Natural Rabbit Hair Session"
+    },
+    "fruitPeeling": {
+      "tag": "Safe Natural Peeling",
+      "title": "Natural Fruit Peeling",
+      "subtitle": "Skin Renewal & Tone Evening with Fruit Acids",
+      "description": "An advanced peeling session using natural fruit and plant acids (like lactic and malic) to deeply renew skin cells, even out skin tone, and improve texture from the first session without harsh chemicals.",
+      "features": [
+        "Visible glow and freshness from the first session",
+        "Safe exfoliation with natural fruit & plant acids",
+        "Deep cleansing to eliminate impurities and blackheads",
+        "Soothing natural mask rich in antioxidants",
+        "Includes personal consultation and natural sunblock application"
+      ],
+      "bookBtn": "Book Natural Fruit Peeling Session"
+    },
+    "premiumCleansing": {
+      "tag": "Deep Cleansing & Glow",
+      "title": "Natural Premium Cleansing",
+      "subtitle": "Signature Deep Cleansing & Herbal Facial",
+      "description": "Combines deep cleansing, crystal peeling, manual blackhead removal, and acne treatment using advanced herbal techniques and personalized home-care products for radiant skin.",
+      "features": [
+        "Deep facial cleansing & advanced crystal peeling",
+        "Professional manual blackhead & acne treatment",
+        "Formulated with natural herbal nourishment",
+        "Includes personalized home-care skin products",
+        "Tailored experience for long-lasting skin radiance"
+      ],
+      "bookBtn": "Book Natural Premium Cleansing Session"
+    },
+    "spaMassage": {
+      "tag": "Relaxation & Holistic Care",
+      "title": "Natural Spa & Massage",
+      "subtitle": "Therapeutic Spa & Healthy Massage Sessions",
+      "description": "Indulge in a unique relaxation experience designed to relieve deep stress and fatigue, while reviving body energy, skin, and hair health backed by clinical nutrition guidance.",
+      "features": [
+        "Relieves muscle tension and restores ease of movement",
+        "Stimulates blood circulation and oxygen flow",
+        "Rejuvenates body energy and relieves fatigue",
+        "Enhances skin and hair health as a reflection of inner care",
+        "Clinical nutrition guidance to help prevent and manage conditions"
+      ],
+      "bookBtn": "Book Natural Spa & Massage Session"
+    },
+    "hairRepair": {
+      "tag": "Repair & Hair Nourishment",
+      "title": "Natural Hair Repair",
+      "subtitle": "Damaged & Dull Hair Restoration Course",
+      "description": "An intensive therapeutic course designed to restore and soften damaged hair, treating internal vitamin deficiencies with dedicated step-by-step follow-up.",
+      "features": [
+        "Restores damaged hair strength, shine, and health",
+        "In-center specialized restoration & softening sessions",
+        "Includes a full home-care product kit",
+        "Treats internal vitamin deficiencies causing hair weakness",
+        "Dedicated close follow-up; suitable for ages 2 to 75"
+      ],
+      "bookBtn": "Book Natural Hair Repair Session"
+    },
+    "scalpDetox": {
+      "tag": "Dandruff Treatment",
+      "title": "Natural Scalp Detox",
+      "subtitle": "Deep Scalp Exfoliation & Cleansing",
+      "description": "A specialized session treating all types of mild-to-severe dandruff using 100% natural formulas, uncovering internal root causes for a healthy, revitalized scalp.",
+      "features": [
+        "Expertise in treating all levels of severe & contagious dandruff",
+        "Deep natural exfoliation removes dead cells and excess buildup",
+        "Accurate diagnosis of internal root causes",
+        "Integrated course combining in-center sessions & home care",
+        "Paves the way for stronger, shinier, and healthier hair growth"
+      ],
+      "bookBtn": "Book Natural Scalp Detox Session"
+    }
+  },
+  "SessionsContent": {
+  "tag": "Exclusive Experiences",
+  "title": "Our Featured Sessions",
+  "subtitle": "Discover our premium natural treatments designed to restore beauty, wellness, and confidence."
+}
 }
