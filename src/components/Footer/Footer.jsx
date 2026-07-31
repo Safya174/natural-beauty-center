@@ -46,6 +46,7 @@ export default function FooterSection() {
               variant="contained"
               component={NavLink}
               to="/sessions"
+              aria-label={t("footer.buttons.bookSession")}
               sx={primaryButton}
             >
               {t("footer.buttons.bookSession")}
@@ -57,6 +58,7 @@ export default function FooterSection() {
               href="https://www.facebook.com/profile.php?id=61568555338359"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={t("footer.buttons.followFacebook")}
               sx={{
                 px: 4,
                 py: 1.3,

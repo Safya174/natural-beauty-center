@@ -20,6 +20,7 @@ export default function SessionsButtons() {
         variant="contained"
         component={NavLink}
         to="/products"
+        aria-label={t("hero.exploreProducts")}
         sx={{
           ...primaryButton,
         }}
@@ -31,6 +32,7 @@ export default function SessionsButtons() {
         variant="outlined"
         component={NavLink}
         to="/sessions"
+        aria-label= {t("hero.bookSession")}
         sx={{
           ...secondaryButton,
         }}

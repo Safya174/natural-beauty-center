@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import BackgroundImg from "../../assets/screen.png";
+import BackgroundImg from "../../assets/screen.webp";
 import HeroContent from "./HeroContent";
 
 export default function Hero() {

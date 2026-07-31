@@ -18,7 +18,6 @@ export default function OurStoryContent() {
         alignItems: "flex-start",
       }}
     >
-     
       <Typography
         variant="h2"
         color="text.primary"
@@ -47,6 +46,7 @@ export default function OurStoryContent() {
         variant="outlined"
         component={NavLink}
         to="/products"
+        aria-label={t("OurStory.button")}
         sx={{
           ...primaryButton,
           mt: 2,

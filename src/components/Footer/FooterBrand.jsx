@@ -1,4 +1,4 @@
-import logo from "../../assets/photo_2026-07-01_19-34-12.jpg";
+import logo from "../../assets/photo_2026-07-01_19-34-12.webp";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";

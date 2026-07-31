@@ -1,5 +1,5 @@
 import reception from "../../../assets/Resption.webp";
-import room from "../../../assets/AboutS.png";
+import room from "../../../assets/AboutS.webp";
 import products from "../../../assets/OurStory.Webp";
 import  Service  from "../../../assets/ser.webp"
 import Device1 from "../../../assets/dev.webp";

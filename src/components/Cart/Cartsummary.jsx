@@ -143,6 +143,7 @@ export default function CartSummary() {
         variant="contained"
         fullWidth
         startIcon={<WhatsAppIcon />}
+        aria-label=  {t("cart.sendWhatsApp")}
         sx={{
           ...primaryButton,
           mb: 2,
@@ -158,6 +159,7 @@ export default function CartSummary() {
         variant="outlined"
         fullWidth
         component={NavLink}
+        aria-label={t("cart.continueShopping")}
         to="/products"
         startIcon={<ShoppingBagOutlinedIcon />}
         sx={{ ...secondaryButton, gap: 1.5 }}

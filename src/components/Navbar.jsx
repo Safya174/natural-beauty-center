@@ -22,7 +22,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
 import { CartContext } from "./Context/CartContext";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/photo_2026-07-01_19-34-12.jpg";
+import logo from "../assets/photo_2026-07-01_19-34-12.webp";
 
 export default function Navbar() {
   const [openDrawer, setOpenDrawer] = React.useState(false);

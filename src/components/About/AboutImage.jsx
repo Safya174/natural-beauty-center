@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import AboutImage from "../../assets/AboutS.png";
+import AboutImage from "../../assets/AboutS.webp";
 export default function AboutImagep() {
   return (
     <Box

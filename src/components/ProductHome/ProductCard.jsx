@@ -149,6 +149,7 @@ export default function ProductCard({ product }) {
 
         <Button
           variant="contained"
+          aria-label={t("productsSection.addToCart")}
           sx={{
             ...primaryButton,
             mt: "auto",

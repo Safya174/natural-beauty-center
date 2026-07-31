@@ -152,6 +152,7 @@ export default function SessionsCard({ session }) {
           href={getSessionBookingLink(session.name, isArabic)}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label= {t(session.buttonKey)}
           startIcon={<WhatsAppIcon />}
           sx={{
             ...primaryButton,

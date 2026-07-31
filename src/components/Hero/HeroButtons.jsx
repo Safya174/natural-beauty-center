@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import { secondaryButton, primaryButton } from "../../Theme/buttonStyles";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+
 export default function HeroButtons() {
   const { t } = useTranslation();
 
@@ -20,6 +21,7 @@ export default function HeroButtons() {
         variant="contained"
         component={NavLink}
         to="/products"
+        aria-label={t("hero.exploreProducts")} 
         sx={{
           ...primaryButton,
         }}
@@ -31,6 +33,7 @@ export default function HeroButtons() {
         variant="outlined"
         component={NavLink}
         to="/sessions"
+        aria-label={t("hero.bookSession")} 
         sx={{
           ...secondaryButton,
         }}

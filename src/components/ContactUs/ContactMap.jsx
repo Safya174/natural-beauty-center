@@ -1,4 +1,3 @@
-
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -11,7 +10,7 @@ import { useTranslation } from "react-i18next";
 export default function ContactMap() {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
-  
+
   return (
     <Box>
       {/* Section Title */}
@@ -126,6 +125,7 @@ export default function ContactMap() {
           rel="noopener noreferrer"
           target="_blank"
           startIcon={<WhatsAppIcon />}
+          aria-label={t("contact.booking.whatsappBtn")}
           sx={{
             ...primaryButton,
             mt: 4,
