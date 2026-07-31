@@ -149,7 +149,7 @@ export default function SessionsCard({ session }) {
         <Button
           variant="contained"
           component="a"
-          href={getSessionBookingLink(session.name, isArabic)}
+          href={getSessionBookingLink(session.name, isArabic ? "ar" : "en")}
           target="_blank"
           rel="noopener noreferrer"
           aria-label= {t(session.buttonKey)}

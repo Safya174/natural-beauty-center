@@ -137,7 +137,7 @@ export default function CartSummary() {
       {/* Buttons */}
       <Button
         component="a"
-        herf={sendOrderToWhatsApp(isArabic)}
+        href={sendOrderToWhatsApp({ lang: isArabic ? "ar" : "en" })}
         target="_blank"
         rel="noopener noreferrer"
         variant="contained"
@@ -150,7 +150,7 @@ export default function CartSummary() {
 
           gap: 1.5,
         }}
-        onClick={sendOrderToWhatsApp}
+        
       >
         {t("cart.sendWhatsApp")}
       </Button>
