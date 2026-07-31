@@ -1,0 +1,1 @@
+var e=`/natural-beauty-center/assets/AboutS-CZ1RtfXW.webp`;export{e as t};

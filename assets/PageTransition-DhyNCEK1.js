@@ -1,0 +1,1 @@
+import{r as e,t}from"./framer-C6CbxPEa.js";var n=e();function r({children:e}){return(0,n.jsx)(t.div,{initial:{opacity:0,y:25},animate:{opacity:1,y:0},exit:{opacity:0,y:-25},transition:{duration:.6,ease:`easeInOut`},children:e})}export{r as t};
