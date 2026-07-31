@@ -1,21 +1,28 @@
+
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+
+
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { Box, Stack } from "@mui/material";
+
 import { primaryButton } from "../../../Theme/buttonStyles";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
+
 export default function SessionsCard({ session }) {
   const { t, i18n } = useTranslation();
   let { getSessionBookingLink } = useContext(CartContext);
   const isArabic = i18n.language === "ar";
   const features = t(session.featuresKey, { returnObjects: true });
+  
   return (
     <Card
       sx={{
@@ -42,6 +49,7 @@ export default function SessionsCard({ session }) {
           component="img"
           image={session.image}
           alt={t(session.titleKey)}
+          loading="lazy"
           height="300"
           sx={{
             objectFit: "cover",

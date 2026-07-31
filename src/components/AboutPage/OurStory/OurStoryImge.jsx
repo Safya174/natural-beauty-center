@@ -6,6 +6,7 @@ export default function OurStoryImge() {
       component={"img"}
       src={OurStoryImg}
       alt="Natural Beauty Center products"
+      loading="lazy"
       sx={{
         borderRadius: "32px",
         boxShadow: "0 20px 50px rgba(127, 166, 98, 0.18)",

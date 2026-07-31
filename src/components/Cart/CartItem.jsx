@@ -1,7 +1,14 @@
-import { Box, Card, Typography, IconButton } from "@mui/material";
-import DeleteOutlineTwoToneIcon from "@mui/icons-material/DeleteOutlineTwoTone";
-import QuantityControl from "./QuantityControl";
+
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
 import CardMedia from "@mui/material/CardMedia";
+
+
+import DeleteOutlineTwoToneIcon from "@mui/icons-material/DeleteOutlineTwoTone";
+
+import QuantityControl from "./QuantityControl";
 import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";

@@ -49,6 +49,7 @@ export default function ProductCard({ product }) {
           component="img"
           image={product.image}
           alt={t(product.nameKey)}
+          loading="lazy"
           height="300"
           sx={{
             objectFit: "cover",

@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Dialog,
-  DialogContent,
-  IconButton,
-  Box,
-  Typography,
-  Button,
-  Stack,
-  Chip,
-} from "@mui/material";
+
+
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import Chip from "@mui/material/Chip";
+
+
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+
 import QuantityControl from "../Cart/QuantityControl";
 
 export default function ProductModal({ open, onClose, product, onAddToCart }) {
@@ -190,7 +193,6 @@ export default function ProductModal({ open, onClose, product, onAddToCart }) {
             >
               <Box
                 sx={{
-                 
                   flexShrink: 0,
                   minWidth: "120px",
                   mx: 0,
@@ -199,7 +201,8 @@ export default function ProductModal({ open, onClose, product, onAddToCart }) {
                   width: { xs: "100%", sm: "auto" },
                 }}
               >
-                <QuantityControl sx={{width:"fullWidth"}}
+                <QuantityControl
+                  sx={{ width: "fullWidth" }}
                   quantity={quantity}
                   onIncrease={() => setQuantity((q) => q + 1)}
                   onDecrease={() => setQuantity((q) => Math.max(1, q - 1))}

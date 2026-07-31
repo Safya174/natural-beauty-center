@@ -1,8 +1,13 @@
-import { Box, Typography } from "@mui/material";
+
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+
 import { useTranslation } from "react-i18next";
+
 export default function SessionsContent() {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   let isArabic = i18n.language == "ar";
+
   return (
     <Box
       sx={{
@@ -22,7 +27,7 @@ export default function SessionsContent() {
           fontWeight: 600,
         }}
       >
-       {t("SessionsContent.tag")}
+        {t("SessionsContent.tag")}
       </Typography>
 
       <Typography
@@ -34,7 +39,7 @@ export default function SessionsContent() {
           color: "text.primary",
         }}
       >
-          {t("SessionsContent.title")}
+        {t("SessionsContent.title")}
       </Typography>
 
       <Typography

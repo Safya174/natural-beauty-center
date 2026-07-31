@@ -1,4 +1,6 @@
-import { Card, CardMedia } from "@mui/material";
+// ✅ التعديل هنا: استخدام modular imports لتحسين الأداء
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
 
 export default function GalleryItem({ image, alt, sx, animation, delay }) {
   return (
@@ -6,7 +8,6 @@ export default function GalleryItem({ image, alt, sx, animation, delay }) {
       data-aos={animation}
       data-aos-delay={delay}
       sx={{
-        
         overflow: "hidden",
         height: "100%",
         cursor: "pointer",
@@ -24,7 +25,7 @@ export default function GalleryItem({ image, alt, sx, animation, delay }) {
         ...sx,
       }}
     >
-      <CardMedia component="img" image={image} alt={alt} />
+      <CardMedia component="img" image={image} alt={alt} loading="lazy" />
     </Card>
   );
 }

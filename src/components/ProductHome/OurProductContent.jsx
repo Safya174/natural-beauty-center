@@ -1,8 +1,13 @@
-import { Box, Typography } from "@mui/material";
+
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+
 import { useTranslation } from "react-i18next";
+
 export default function ProductContent() {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   let isArabic = i18n.language == "ar";
+  
   return (
     <Box
       sx={{
@@ -22,7 +27,7 @@ export default function ProductContent() {
           fontWeight: 600,
         }}
       >
-       {t("productsSection.subtitle")}
+        {t("productsSection.subtitle")}
       </Typography>
 
       <Typography
@@ -34,7 +39,7 @@ export default function ProductContent() {
           color: "text.primary",
         }}
       >
-         {t("productsSection.title")}
+        {t("productsSection.title")}
       </Typography>
 
       <Typography
@@ -47,7 +52,7 @@ export default function ProductContent() {
           mx: "auto",
         }}
       >
-       {t("productsSection.description")}
+        {t("productsSection.description")}
       </Typography>
     </Box>
   );

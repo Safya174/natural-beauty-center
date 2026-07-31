@@ -1,17 +1,20 @@
-import { Box, Button } from "@mui/material";
+// ✅ التعديل هنا: استخدام modular imports لتحسين الأداء
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-
 export default function FooterLinks() {
-  const { t,i18n } = useTranslation();
+  const { t } = useTranslation();
   const pages = [
-  { title: t("nav.home"), path: "/" },
-  { title: t("nav.about"), path: "/about" },
-  { title: t("nav.sessions"), path: "/sessions" },
-  { title:t("nav.products") , path: "/products" },
-  { title: t("nav.contact") , path: "/contact" },
-];
+    { title: t("nav.home"), path: "/" },
+    { title: t("nav.about"), path: "/about" },
+    { title: t("nav.sessions"), path: "/sessions" },
+    { title: t("nav.products"), path: "/products" },
+    { title: t("nav.contact"), path: "/contact" },
+  ];
+
   return (
     <Box
       sx={{
@@ -23,7 +26,6 @@ export default function FooterLinks() {
         gap: 2,
       }}
     >
-      
       {pages.map((page) => (
         <Button
           key={page.title}

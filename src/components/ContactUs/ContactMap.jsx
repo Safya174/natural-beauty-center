@@ -1,10 +1,17 @@
-import { Box, Button, Typography } from "@mui/material";
+
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
 import { primaryButton } from "../../Theme/buttonStyles";
 import { useTranslation } from "react-i18next";
+
 export default function ContactMap() {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
+  
   return (
     <Box>
       {/* Section Title */}
