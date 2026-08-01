@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ProductPage = lazy(() => import("./pages/ProductPage"));
-const ContactUs = lazy(() => import("./components/ContactUs/Contactus"));
+const ContactPage = lazy(() => import("./pages/Contactuspage"));
 const CartPage = lazy(() => import("./pages/CartPage"));
 const SessionsPage = lazy(() => import("./pages/SessionsPage"));
 
@@ -35,7 +35,7 @@ function App() {
             <Route element={<MinLayout />}>
               <Route index element={<HomePage />} />
               <Route path="about" element={<AboutPage />} />
-              <Route path="contact" element={<ContactUs />} />
+              <Route path="contact" element={<ContactPage />} />
               <Route path="products" element={<ProductPage />} />
               <Route path="sessions" element={<SessionsPage />} />
               <Route path="cart" element={<CartPage />} />
