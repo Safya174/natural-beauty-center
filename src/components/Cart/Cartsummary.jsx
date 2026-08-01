@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 export default function CartSummary() {
-  let { getTotalPrice, getTotalItems, sendOrderToWhatsApp } =
+  let { getTotalPrice, getTotalItems, sendOrderToWhatsApp,clearCart } =
     useContext(CartContext);
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
@@ -144,6 +144,11 @@ export default function CartSummary() {
         fullWidth
         startIcon={<WhatsAppIcon />}
         aria-label=  {t("cart.sendWhatsApp")}
+        onClick={()=>{
+          setTimeout(()=>{
+            clearCart()
+          },1000)
+        }}
         sx={{
           ...primaryButton,
           mb: 2,
