@@ -4,8 +4,35 @@ import Session3 from "../../../assets/Session3.webp"
 import Session4 from "../../../assets/Session4.webp"
 import Session5 from "../../../assets/Session5.webp"
 import Session6 from "../../../assets/Session6.webp"
+import naturalAcidSmooth from "../../../assets/naturalAcidSmooth.webp"
 
 export const sessionsData = [
+  {
+    id: "natural-acid-smooth",
+    name: "Natural Acid Smooth",
+    category: "Hair Care",
+    tagKey: "sessions.naturalAcidSmooth.tag",
+    titleKey: "sessions.naturalAcidSmooth.title",
+    subtitleKey: "sessions.naturalAcidSmooth.subtitle",
+    descriptionKey: "sessions.naturalAcidSmooth.description",
+    featuresKey: "sessions.naturalAcidSmooth.features",
+    buttonKey: "sessions.naturalAcidSmooth.bookBtn",
+    image: naturalAcidSmooth,
+    isFeatured: true,
+  },
+  {
+    id: "natural-scalp-detox",
+    name: "Natural Scalp Detox",
+    category: "Hair Care",
+    tagKey: "sessions.scalpDetox.tag",
+    titleKey: "sessions.scalpDetox.title",
+    subtitleKey: "sessions.scalpDetox.subtitle",
+    descriptionKey: "sessions.scalpDetox.description",
+    featuresKey: "sessions.scalpDetox.features",
+    buttonKey: "sessions.scalpDetox.bookBtn",
+    image: Session6,
+    isFeatured: true,
+  },
   {
     id: "natural-rabbit-hair",
     name: "Natural Rabbit Hair",
@@ -30,7 +57,7 @@ export const sessionsData = [
     featuresKey: "sessions.fruitPeeling.features",
     buttonKey: "sessions.fruitPeeling.bookBtn",
     image: Session2,
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     id: "natural-premium-cleansing",
@@ -42,7 +69,7 @@ export const sessionsData = [
     descriptionKey: "sessions.premiumCleansing.description",
     featuresKey: "sessions.premiumCleansing.features",
     buttonKey: "sessions.premiumCleansing.bookBtn",
-    image:Session3,
+    image: Session3,
     isFeatured: false,
   },
   {
@@ -69,19 +96,6 @@ export const sessionsData = [
     featuresKey: "sessions.hairRepair.features",
     buttonKey: "sessions.hairRepair.bookBtn",
     image: Session5,
-    isFeatured: true,
-  },
-  {
-    id: "natural-scalp-detox",
-    name: "Natural Scalp Detox",
-    category: "Hair Care",
-    tagKey: "sessions.scalpDetox.tag",
-    titleKey: "sessions.scalpDetox.title",
-    subtitleKey: "sessions.scalpDetox.subtitle",
-    descriptionKey: "sessions.scalpDetox.description",
-    featuresKey: "sessions.scalpDetox.features",
-    buttonKey: "sessions.scalpDetox.bookBtn",
-    image: Session6,
     isFeatured: false,
   },
-];
+]

@@ -43,6 +43,7 @@ export default function SessionsCard({ session }) {
           boxShadow: "0 20px 45px rgba(74,107,60,.15)",
         },
       }}
+      id={session.id} 
     >
       <Box sx={{ position: "relative", overflow: "hidden" }}>
         <CardMedia

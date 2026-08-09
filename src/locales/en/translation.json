@@ -47,6 +47,10 @@
       }
     }
   },
+  "featuredSessions": {
+    "title": "Pure Sessions & Natural Care Essentials",
+    "subtitle": "Explore our carefully selected collection of natural sessions designed for your daily hair and skin care."
+  },
   "productsSection": {
     "subtitle": "OUR NATURAL COLLECTION",
     "title": "Pure Herbs & Natural Essentials",
@@ -237,6 +241,20 @@
         "Suitable for all hair types including African and damaged hair"
       ],
       "bookBtn": "Book Natural Rabbit Hair Session"
+    },
+    "naturalAcidSmooth": {
+      "tag": "100% Natural Organic Straightening",
+      "title": "Natural Acid Smooth",
+      "subtitle": "Safe Hair Straightening with Botanical & Fruit Acids",
+      "description": "Hair straightening is not just temporary sleekness—it is a comprehensive long-term investment in hair health from roots to tips. Powered by organic plant and amino acids, this session is 100% free of harsh chemicals and formalin. It features an internal nutritional supplement plan to strengthen follicles and reduce hair fall, paired with a complete home-care kit for lasting vitality.",
+      "features": [
+        "Safe straightening & deep nourishment using botanical & amino acid tech",
+        "Completely free of formalin and harsh chemicals",
+        "100% safe for kids, pregnant, and breastfeeding women across all hair types",
+        "Targeted vitamin & supplement plan to strengthen weak follicles and boost growth",
+        "Includes a full home-care kit (Shampoo, Conditioner, & Dedicated Cream)"
+      ],
+      "bookBtn": "Book Natural Acid Smooth Session"
     },
     "fruitPeeling": {
       "tag": "Safe Natural Peeling",
