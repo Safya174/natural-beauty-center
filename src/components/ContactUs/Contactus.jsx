@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import ContactUSContent from "./ContactusContent";
 import ContactusCards from "./ContactusCards";
 import ContactMap from "./ContactMap";
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 
 
 export default function ContactUs() {

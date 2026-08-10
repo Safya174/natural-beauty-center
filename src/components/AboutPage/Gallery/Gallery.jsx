@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import spacing from "../../../theme/spacing";
+import spacing from "../../../Theme/spacing"
 import  GalleryContent from './GalleryContent'
 import GalleryGrid from "./GalleryGrid";
 

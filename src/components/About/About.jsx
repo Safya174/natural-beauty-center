@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import AboutContent from "./AboutContent";
 import AboutImage from "./AboutImage";
 
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 
 export default function AboutSection() {
   return (

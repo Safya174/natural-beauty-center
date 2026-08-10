@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import WhyChoosContent from "./WhyChoosContent";
 import  FeaturedCards  from '../FeatureCards/FeatureCards'
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 
 
 export default function WhySection() {
