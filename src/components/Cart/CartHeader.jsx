@@ -1,11 +1,11 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 import { useTranslation } from "react-i18next";
 export default function CartContent() {
-    const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
-  
+
   return (
     <Box
       component="section"

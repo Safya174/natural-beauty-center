@@ -27,13 +27,12 @@ export default function SessionsContent() {
           fontSize: { xs: "0.95rem", sm: "1.1rem" },
           fontWeight: 700,
           letterSpacing: isArabic ? "normal" : "4px",
-      
+
           color: isArabic ? "#3E6B39" : "primary.main",
           mt: 1,
         }}
       >
-       {t("sessionsHero.tagline")}
-
+        {t("sessionsHero.tagline")}
       </Typography>
 
       {/* العنوان الرئيسي */}
@@ -43,9 +42,11 @@ export default function SessionsContent() {
           mt: 0,
           mb: 0,
           lineHeight: isArabic ? 1.35 : 1.2,
-          
+
           color: isArabic ? "#1A2E17" : "text.primary",
-          textShadow: isArabic ? "0px 1px 3px rgba(255, 255, 255, 0.6)" : "none",
+          textShadow: isArabic
+            ? "0px 1px 3px rgba(255, 255, 255, 0.6)"
+            : "none",
         }}
       >
         {t("sessionsHero.title")}
@@ -58,15 +59,14 @@ export default function SessionsContent() {
           maxWidth: "38rem",
           mt: 0,
           lineHeight: 1.8,
-         
-          color:  "#3A4D39" ,
-          fontWeight: isArabic ? 500 : 400, 
+
+          color: "#3A4D39",
+          fontWeight: isArabic ? 500 : 400,
         }}
       >
         {t("sessionsHero.description")}
       </Typography>
 
-      
       <SessionsButtons />
     </Box>
   );

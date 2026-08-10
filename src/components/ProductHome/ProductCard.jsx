@@ -6,14 +6,14 @@ import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
 import { Box } from "@mui/material";
 import { primaryButton } from "../../Theme/buttonStyles";
-import { useContext ,useState  } from "react";
-import { CartContext} from "../Context/CartContext";
+import { useContext, useState } from "react";
+import { CartContext } from "../Context/CartContext";
 import { useTranslation } from "react-i18next";
 import ProductModal from "./ProductModal";
 export default function ProductCard({ product }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t, i18n } = useTranslation();
-  const { addToCart  } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
   const isArabic = i18n.language === "ar";
 
   // دالة لتنسيق الرقم حسب اللغة الحالية (عربي/إنجليزي)
@@ -44,7 +44,10 @@ export default function ProductCard({ product }) {
       }}
     >
       {/* Container للصورة مع الشارة (Badge) */}
-      <Box sx={{ position: "relative", overflow: "hidden" }} onClick={()=> setIsModalOpen(true)}>
+      <Box
+        sx={{ position: "relative", overflow: "hidden" }}
+        onClick={() => setIsModalOpen(true)}
+      >
         <CardMedia
           component="img"
           image={product.image}

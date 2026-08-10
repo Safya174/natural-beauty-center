@@ -1,4 +1,3 @@
-
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -7,7 +6,6 @@ import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-
 
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -22,7 +20,7 @@ export default function SessionsCard({ session }) {
   let { getSessionBookingLink } = useContext(CartContext);
   const isArabic = i18n.language === "ar";
   const features = t(session.featuresKey, { returnObjects: true });
-  
+
   return (
     <Card
       sx={{
@@ -43,7 +41,7 @@ export default function SessionsCard({ session }) {
           boxShadow: "0 20px 45px rgba(74,107,60,.15)",
         },
       }}
-      id={session.id} 
+      id={session.id}
     >
       <Box sx={{ position: "relative", overflow: "hidden" }}>
         <CardMedia
@@ -153,7 +151,7 @@ export default function SessionsCard({ session }) {
           href={getSessionBookingLink(session.name, isArabic ? "ar" : "en")}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label= {t(session.buttonKey)}
+          aria-label={t(session.buttonKey)}
           startIcon={<WhatsAppIcon />}
           sx={{
             ...primaryButton,

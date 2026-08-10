@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 import { useTranslation } from "react-i18next";
 export default function ProductContent() {
   const { t } = useTranslation();

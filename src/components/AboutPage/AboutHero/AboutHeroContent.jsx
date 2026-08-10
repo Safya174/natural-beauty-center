@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTranslation } from "react-i18next";
-import spacing from "../../../theme/spacing";
+import spacing from "../../../Theme/spacing";
 
 export default function AboutHeroContent() {
   const { t, i18n } = useTranslation();
@@ -14,10 +14,9 @@ export default function AboutHeroContent() {
         flexDirection: "column",
         gap: spacing.hero.contentGap,
         maxWidth: { xs: "100%", md: "620px" },
-        mr:{xs : 0 , md:isArabic? 12 : 8 },
-      
-        width: "100%"
+        mr: { xs: 0, md: isArabic ? 12 : 8 },
 
+        width: "100%",
       }}
     >
       <Typography
@@ -27,7 +26,7 @@ export default function AboutHeroContent() {
           fontSize: ".95rem",
           fontWeight: 700,
           letterSpacing: isArabic ? "normal" : ".35em",
-          color:  "#3E6B39" ,
+          color: "#3E6B39",
           mt: 2,
         }}
       >
@@ -53,13 +52,13 @@ export default function AboutHeroContent() {
       <Typography
         variant="body1"
         color="text.secondary"
-          sx={{
+        sx={{
           maxWidth: "38rem",
           mt: 0,
           lineHeight: 1.8,
-          
+
           color: "#3A4D39",
-          fontWeight: isArabic ? 500 : 400, 
+          fontWeight: isArabic ? 500 : 400,
         }}
       >
         {t("AboutHero.description")}

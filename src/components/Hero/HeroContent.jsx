@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import HeroButtons from "./HeroButtons";
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 import { useTranslation } from "react-i18next";
 
 export default function HeroContent() {
@@ -27,13 +27,12 @@ export default function HeroContent() {
           fontSize: { xs: "0.95rem", sm: "1.1rem" },
           fontWeight: 700,
           letterSpacing: isArabic ? "normal" : "4px",
-      
+
           color: isArabic ? "#3E6B39" : "primary.main",
           mt: 1,
         }}
       >
-       NATURAL BEAUTY CENTER
-
+        NATURAL BEAUTY CENTER
       </Typography>
 
       {/* العنوان الرئيسي */}
@@ -43,9 +42,11 @@ export default function HeroContent() {
           mt: 0,
           mb: 0,
           lineHeight: isArabic ? 1.35 : 1.2,
-          
+
           color: isArabic ? "#1A2E17" : "text.primary",
-          textShadow: isArabic ? "0px 1px 3px rgba(255, 255, 255, 0.6)" : "none",
+          textShadow: isArabic
+            ? "0px 1px 3px rgba(255, 255, 255, 0.6)"
+            : "none",
         }}
       >
         {t("hero.title")}
@@ -59,7 +60,7 @@ export default function HeroContent() {
           mt: 0,
           lineHeight: 1.8,
           // 🟢 درجة افتح وأوضح في العربي
-          color:  "#3A4D39",
+          color: "#3A4D39",
           fontWeight: isArabic ? 500 : 400, // زيادة سمك بسيط لثبات الحروف
         }}
       >

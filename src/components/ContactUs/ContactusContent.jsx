@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 import { useTranslation } from "react-i18next";
 export default function ContactUSContent() {
   const { t, i18n } = useTranslation();
@@ -22,7 +22,7 @@ export default function ContactUSContent() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: isArabic? "normal" : 2,
+          letterSpacing: isArabic ? "normal" : 2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,

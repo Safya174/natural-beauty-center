@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { primaryButton } from "../../../Theme/buttonStyles";
 import Button from "@mui/material/Button";
-import spacing from "../../../theme/spacing";
+import spacing from "../../../Theme/spacing";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 export default function OurStoryContent() {

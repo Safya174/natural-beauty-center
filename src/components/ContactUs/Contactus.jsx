@@ -7,22 +7,23 @@ import ContactusCards from "./ContactusCards";
 import ContactMap from "./ContactMap";
 import spacing from "../../Theme/spacing";
 
-
 export default function ContactUs() {
-  
   return (
-    <Box component="section"  sx={{ py: spacing.section.py,backgroundColor:"white"}}>
+    <Box
+      component="section"
+      sx={{ py: spacing.section.py, backgroundColor: "white" }}
+    >
       <Container maxWidth="lg">
         <Grid container spacing={3} alignItems="center">
           <Grid size={{ xs: 12 }}>
-             <ContactUSContent/>
+            <ContactUSContent />
           </Grid>
 
           <Grid size={{ xs: 12 }}>
-            <ContactusCards/>
+            <ContactusCards />
           </Grid>
-            <Grid size={{ xs: 12 }}>
-            <ContactMap/>
+          <Grid size={{ xs: 12 }}>
+            <ContactMap />
           </Grid>
         </Grid>
       </Container>

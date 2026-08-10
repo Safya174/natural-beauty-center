@@ -62,7 +62,7 @@ export default function AboutContent() {
         variant="outlined"
         component={NavLink}
         to="/about"
-        aria-label= {t("About.Discoveryourstory")}
+        aria-label={t("About.Discoveryourstory")}
         sx={{
           ...primaryButton,
         }}

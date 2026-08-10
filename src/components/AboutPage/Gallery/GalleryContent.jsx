@@ -1,11 +1,11 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import spacing from "../../../theme/spacing";
+import spacing from "../../../Theme/spacing";
 import { useTranslation } from "react-i18next";
 
 export default function GalleryContent() {
-   const { t,i18n } = useTranslation();
-     let isArbic = i18n.language == "ar"
+  const { t, i18n } = useTranslation();
+  let isArbic = i18n.language == "ar";
   return (
     <Box
       component="section"
@@ -21,7 +21,7 @@ export default function GalleryContent() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: isArbic ? "normal" :  2,
+          letterSpacing: isArbic ? "normal" : 2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
@@ -38,7 +38,7 @@ export default function GalleryContent() {
           color: "text.primary",
         }}
       >
-       {t("InsideCenter.title")}
+        {t("InsideCenter.title")}
       </Typography>
       <Typography
         variant="body1"
@@ -51,7 +51,7 @@ export default function GalleryContent() {
           lineHeight: 1.9,
         }}
       >
-         {t("InsideCenter.description")}
+        {t("InsideCenter.description")}
       </Typography>
     </Box>
   );

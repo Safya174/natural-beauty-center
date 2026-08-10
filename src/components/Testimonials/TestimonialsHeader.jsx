@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import spacing from "../../theme/spacing";
+import spacing from "../../Theme/spacing";
 import { useTranslation } from "react-i18next";
 export default function TestimonialsHeader() {
-    const { t,i18n  } = useTranslation();
-    let isArabic = i18n.language == "ar";
+  const { t, i18n } = useTranslation();
+  let isArabic = i18n.language == "ar";
   return (
     <Box
       component="section"
@@ -12,7 +12,7 @@ export default function TestimonialsHeader() {
         display: "flex",
         flexDirection: "column",
         gap: spacing.hero.contentGap,
-        alignItems:"center"
+        alignItems: "center",
       }}
     >
       <Typography
@@ -20,13 +20,13 @@ export default function TestimonialsHeader() {
         sx={{
           fontFamily: "Alexandria",
           fontSize: "1rem",
-          letterSpacing: isArabic ? "normal":2,
+          letterSpacing: isArabic ? "normal" : 2,
           textTransform: "uppercase",
           color: "primary.main",
           fontWeight: 600,
         }}
       >
-          {t("testimonials.subtitle")}
+        {t("testimonials.subtitle")}
       </Typography>
       <Typography
         variant="h2"
@@ -48,13 +48,10 @@ export default function TestimonialsHeader() {
           fontFamily: "Alexandria",
           fontWeight: 400,
           lineHeight: isArabic ? 2 : 1.9,
-         
         }}
       >
-         {t("testimonials.description")}
-    
+        {t("testimonials.description")}
       </Typography>
-    
     </Box>
   );
 }

@@ -32,7 +32,7 @@ export default function SessionsButtons() {
         variant="outlined"
         component={NavLink}
         to="/sessions"
-        aria-label= {t("hero.bookSession")}
+        aria-label={t("hero.bookSession")}
         sx={{
           ...secondaryButton,
         }}

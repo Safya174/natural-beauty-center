@@ -8,7 +8,7 @@ import spacing from "../../Theme/spacing";
 
 export default function AboutSection() {
   return (
-    <Box component="section"  sx={{ py: spacing.section.py }}>
+    <Box component="section" sx={{ py: spacing.section.py }}>
       <Container maxWidth="lg">
         <Grid container spacing={10} alignItems="center">
           <Grid size={{ xs: 12, md: 6 }}>
