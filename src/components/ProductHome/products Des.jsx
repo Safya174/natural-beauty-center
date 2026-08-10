@@ -1,11 +1,11 @@
-import horsetailSpray from "../../assets/pro3.WebP";
-import sulfateFreeShampoo from "../../assets/pro1.WebP";
-import antimonyOil from "../../assets/pro2.WebP";
-import stylingCream from "../../assets/pro4.WebP";
-import naturalHerbalHairBalm from "../../assets/pro5.WebP";
-import spirulinaCapsules from "../../assets/pro6.WebP";
-import indianCostusCapsules from "../../assets/pro7.WebP";
-import nessFatCream from "../../assets/pro8.WebP";
+import horsetailSpray from "../../assets/pro3.webp";
+import sulfateFreeShampoo from "../../assets/pro1.webp";
+import antimonyOil from "../../assets/pro2.webp";
+import stylingCream from "../../assets/pro4.webp";
+import naturalHerbalHairBalm from "../../assets/pro5.webp";
+import spirulinaCapsules from "../../assets/pro6.webp";
+import indianCostusCapsules from "../../assets/pro7.webp";
+import nessFatCream from "../../assets/pro8.webp";
 
 const products = [
   {
