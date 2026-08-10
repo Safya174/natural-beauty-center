@@ -8,11 +8,11 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import App from "./App";
 import "./i18n";
-import theme from "./theme";
+import theme from "./Theme/index";
 import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/natural-beauty-center">
+  <BrowserRouter >
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <HelmetProvider>
