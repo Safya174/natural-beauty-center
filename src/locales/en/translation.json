@@ -69,7 +69,8 @@
       "natural": "Natural",
       "herbal": "Herbal",
       "premium": "Premium",
-      "organic": "Organic"
+      "organic": "Organic",
+      "freeSession": "🎁 Free Session"
     },
     "items": {
       "horsetailSpray": {

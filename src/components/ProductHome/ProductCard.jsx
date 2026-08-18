@@ -10,6 +10,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../Context/CartContext";
 import { useTranslation } from "react-i18next";
 import ProductModal from "./ProductModal";
+import Link from "@mui/material/Link";
 export default function ProductCard({ product }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t, i18n } = useTranslation();
@@ -115,8 +116,32 @@ export default function ProductCard({ product }) {
         >
           {t(product.descriptionKey)}
         </Typography>
+        {/* رابط الجلسة الهدية */}
+{product.sessionLink && (
+  <Box sx={{ mb: 2 }}>
+    <Link
+      href={product.sessionLink}
+      underline="hover"
+      sx={{
+        color: "primary.main",
+        fontWeight: 700,
+        fontSize: "0.875rem",
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 0.5,
+        transition: "color 0.2s",
+        "&:hover": {
+          color: "text.primary",
+        },
+      }}
+    >
+      ✨ {isArabic ? "تفاصيل الجلسة الهدية (Natural Rabbit Hair)" : "Free Gift Session Details (Natural Rabbit Hair)"}
+    </Link>
+  </Box>
+)}
 
         {/* سكشن الأسعار والعملة المترجمة بصياغة اتجاه مظبوطة */}
+
         <Box
           sx={{
             display: "flex",
